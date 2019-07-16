@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Smart-LinQ</title>
+</head>
+
+<style>
+  p {
+    color: var(--black);
+  }
+</style>
+
+<body>
+  <div class='contain'>
+      <div class='item header'>
+        <h1>Smart-LinQ</h1>
+        <div class='links'>
+            <a href='#'>TPA#1</a>
+            <a href='index.html'>Dashboard</a>
+            <a href='workspace.html'>Workspace</a>
+            <a href='#'>Lists</a>
+        </div>
+        <div class='user'>
+            <p>User</p>
+        </div>
+      </div>
+      <div class='item sidebar'>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Filter</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Messages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Alerts</a>
+            </li>
+            <span class='divider'></span>
+            <li class="nav-item">
+              <a class="nav-link-active" href="#">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Claims</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Eligibility</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Accounts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Policies</a>
+              </li>
+          </ul>
+      </div>
+      <div class='item content'>
+        <h2>Dashboard</h2>
+        
+
+      </div>
+
+  </div>
+
+  <style>
+    .contain {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 2fr 9fr;
+      grid-template-rows: 50px 750px;
+      grid-template: 150px 150px 100px;
+      grid-template-areas: 
+        "header     header      header"
+        "sidebar    content     content"
+    }
+
+    .content {
+      grid-area: content;
+      margin-right: 20px;
+    }
+    
+    .header {
+        display: grid;
+        grid-area: header;
+        grid-template-columns: 2fr 8fr 1fr;
+    }
+
+    .links {
+      padding-top: 15px;
+      word-spacing: 20px;
+    }
+
+    .sidebar {
+      border: 1px solid var(--black);
+      border-radius: 3px;
+      grid-area: sidebar;
+    }
+
+    .user {
+      padding-top: 15px;
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        grid-template-areas: 
+        "header   header    header"
+        "content  content   content"
+        "sidebar  sidebar   sidebar"
+      }
+    }
+
+  </style>
+</body>
+
+</html>

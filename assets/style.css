@@ -1,0 +1,65 @@
+:root {
+    --black: #272727;
+  }
+  
+  html {
+    /* border-box box model allows us to add padding and border to our elements without increasing their size */
+    box-sizing: border-box;
+    /* A system font stack so things load nice and quick! */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+      Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 900;
+    color: var(--black);
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  a:link, a:hover, a:visited {
+   text-decoration: none !important;
+   color: var(--black) !important; 
+  }
+  
+  body {
+    background-color: #f2f2f2 !important;
+  }
+
+  .divider {
+    background-color: var(--black);
+    height: 1px;
+    width: 240px;
+    display: block;
+    margin: 10px 0 10px 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 5px 0;
+  }
+
+  .header, .sidebar {
+    background-color: #d9d9d9;
+  }
+  /* Each item in our grid will contain numbers */
+  .item {
+    /* We center the contents of these items. You can also do this with flexbox too! */
+    display: grid;
+    justify-content: start;
+    align-items: start;
+  }
+  
+  .item p {
+    margin: 0 0 5px 0;
+  }
+
+  ul {
+    list-style: none;
+  }

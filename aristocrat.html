@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Smart-LinQ</title>
+</head>
+
+<body>
+    <div class='contain'>
+        <div class='item header'>
+            <h1>Smart-LinQ</h1>
+            <div class='links'>
+                <a href='#'>TPA#1</a>
+                <a href='index.html'>Dashboard</a>
+                <a href='workspace.html'>Workspace</a>
+                <a href='#'>Lists</a>
+            </div>
+            <div class='user'>
+                <p>User</p>
+            </div>
+        </div>
+        <div class='item sidebar'>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Filter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Messages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Alerts</a>
+                </li>
+                <span class='divider'></span>
+            </ul>
+        </div>
+        <div class='item content'>
+            <h2>Workspace</h2>
+            <div class='acct-info'>
+                <div class='org-dropdown'>
+                    <h3>TPA #1</h3>
+                    <form>
+                        <select>
+                            <option value="0">Select User:</option>
+                            <option value="1">Bruce Wayne - Admin</option>
+                            <option value="2">Robin - Admin</option>
+                            <option value="3">Cat Woman - User</option>
+                            <option value="4">Poison Ivy - User</option>
+                            <option value="5">Penguin - User</option>
+                            <option value="6">Joker - User</option>
+                            <option value="7">Bane - User</option>
+                        </select>
+                    </form>
+                </div>
+                <div class='card'>
+                    <h3>Account</h3>
+                    <p class='drill'>Drill Down Below</p>
+                </div>
+                <div class='card'>
+                    <h3>Policy</h3>
+                    <p class='drill'>Drill Down Below</p>
+                </div>
+                <div class='card'>
+                    <h3>Filing</h3>
+                    <p class='drill'>Drill Down Below</p>
+                </div>
+                <div class='card'>
+                    <h3>Claim</h3>
+                    <p class='drill'>Drill Down Below</p>
+                </div>
+            </div>
+
+            <h3 id='title'>Drill Down</h3>
+
+            <div class='acct-details'>
+                <div class='card card-drill'>
+                    <div class='active'>
+                        <div class="onoffswitch">
+                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch"
+                                checked>
+                            <label class="onoffswitch-label" for="myonoffswitch">
+                                <span class="onoffswitch-inner"></span>
+                                <span class="onoffswitch-switch"></span>
+                            </label>
+                            <h6>Active Policy</h6>
+                        </div>
+
+                    </div>
+                    <form>
+                        <input type="text" name="search" placeholder="name - id">
+                    </form>
+                    <form>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" checked> Accounts <a
+                                    href='#'><u>1</u></a></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio"> Policies <a
+                                    href='#'><u>2</u></a></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio"> Members <a
+                                    href='#'><u>324</u></a></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio"> Filings <a
+                                    href='#'><u>75</u></a></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio"> Claims <a
+                                    href='#'><u>204</u></a></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio"> Notices <a
+                                    href='#'><u>4</u></a></label>
+                        </div>
+                    </form>
+                </div>
+                <div class='card card-drill2'>
+                    <h3>Accounts</h3>
+                    <table>
+                        <tr>
+                            <th>Account</th>
+                            <th>Policies</th>
+                            <th>Stop-Loss Admin</th>
+                            <th>Eligibility Coordinator</th>
+                            <th>Members</th>
+                        </tr>
+                        <tr>
+                            <td><a href='#'>ACME Flooring</a></td>
+                            <td>1</td>
+                            <td>Robin</td>
+                            <td>Alfred</td>
+                            <td>400</td>
+                        </tr>
+                        <tr>
+                            <td><a href='aristocrat.html'>Aristocrat Inc</a></td>
+                            <td>2</td>
+                            <td>Bruce Wayne</td>
+                            <td>Alfred</td>
+                            <td>324</td>
+                        </tr>
+                        <tr>
+                            <td><a href='#'>Broom Makers</a></td>
+                            <td>2</td>
+                            <td>Penguin</td>
+                            <td>Alfred</td>
+                            <td>112</td>
+                        </tr>
+                        <tr>
+                            <td><a href='#'>Cornacopia Inc</a></td>
+                            <td>1</td>
+                            <td>Robin</td>
+                            <td>Alfred</td>
+                            <td>86</td>
+                        </tr>
+                        <tr>
+                            <td><a href='#'>Kansas Farming</a></td>
+                            <td>2</td>
+                            <td>Cat Woman</td>
+                            <td>Batman</td>
+                            <td>277</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+    <style>
+        .acct-details {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 3fr 7fr;
+            grid-template-rows: 100px;
+        }
+
+        .acct-info {
+            background-color: #fff;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+            grid-template-rows: 150px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #d9d9d9;
+            height: 150px;
+            padding: 5px;
+        }
+
+        .card-drill {
+            align-items: start;
+            background-color: #fff;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            height: 350px;
+            justify-content: start
+        }
+
+        .card-drill2 {
+            align-items: start;
+            background-color: #fff;
+            display: grid;
+            height: 350px;
+            justify-content: start;
+            padding: 30px;
+        }
+
+        .contain {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: 2fr 9fr;
+            grid-template-rows: 50px 450px;
+            grid-template: 150px 150px 100px;
+            grid-template-areas:
+                "header     header      header"
+                "sidebar    content     content";
+        }
+
+        .content {
+            grid-area: content;
+            margin-right: 20px;
+        }
+
+        .drill {
+            color: #828282;
+            padding-top: 10px;
+        }
+
+        .drill-it {
+            color: #828282;
+            font-size: 2em;
+            padding-top: 100px;
+            text-align: center;
+        }
+
+        .header {
+            display: grid;
+            grid-area: header;
+            grid-template-columns: 2fr 8fr 1fr;
+        }
+
+        input[type=text] {
+            width: 130px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 13px;
+            background-color: white;
+            background-image: url('searchicon.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+        }
+
+        input[type=text]:focus {
+            width: 100%;
+        }
+
+        .links {
+            padding-top: 15px;
+            word-spacing: 20px;
+        }
+
+        .onoffswitch {
+            position: relative;
+            width: 50px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .onoffswitch-checkbox {
+            display: none;
+        }
+
+        .onoffswitch-label {
+            display: block;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid #999999;
+            border-radius: 20px;
+        }
+
+        .onoffswitch-inner {
+            display: block;
+            width: 200%;
+            margin-left: -100%;
+            transition: margin 0.3s ease-in 0s;
+        }
+
+        .onoffswitch-inner:before,
+        .onoffswitch-inner:after {
+            display: block;
+            float: left;
+            width: 50%;
+            height: 30px;
+            padding: 0;
+            line-height: 30px;
+            font-size: 14px;
+            color: white;
+            font-family: Trebuchet, Arial, sans-serif;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+
+        .onoffswitch-inner:before {
+            content: "";
+            padding-left: 10px;
+            background-color: #428A56;
+            color: #FFFFFF;
+        }
+
+        .onoffswitch-inner:after {
+            content: "";
+            padding-right: 10px;
+            background-color: #EEEEEE;
+            color: #999999;
+            text-align: right;
+        }
+
+        .onoffswitch-switch {
+            display: block;
+            height: 18px;
+            width: 18px;
+            margin: 10px;
+            background: #FFFFFF;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 17px;
+            border: 2px solid #999999;
+            border-radius: 20px;
+            transition: all 0.3s ease-in 0s;
+        }
+
+        .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
+            margin-left: 0;
+        }
+
+        .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
+            right: 0px;
+        }
+
+        .radio {
+            margin-left: 50px;
+        }
+
+        .sidebar {
+            border: 1px solid var(--black);
+            border-radius: 3px;
+            grid-area: sidebar;
+            height: 730px;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 110%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        #title {
+            color: white;
+            background-color: #574f77;
+            background-size: cover;
+            height: cover;
+            padding: 10px;
+            width: cover;
+        }
+
+        .user {
+            padding-top: 15px;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                grid-template-areas:
+                    "header   header    header"
+                    "content  content   content"
+                    "sidebar  sidebar   sidebar"
+            }
+        }
+    </style>
+
+</body>
+
+</html>
