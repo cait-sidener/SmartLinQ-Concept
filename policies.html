@@ -56,8 +56,17 @@
                     </form>
                 </div>
                 <div class='card'>
-                    <h4>Account</h4>
-                    <p class='drill'>Drill Down Below</p>
+                    <div class='acct-active'>
+                        <h4>Account</h4>
+                        <p style='color:#428A56'><b>Active</b></p>
+                    </div>
+                    <p style='color:#574f77'><b>0004 Aristocrat Inc</b></p>
+                    <p>Two-Face</p>
+                    <p>916-334-5432</p>
+                    <p>2face@aristinc.com</p>
+                    <p><b>324 Members</b></p>
+
+
                 </div>
                 <div class='card'>
                     <h4>Policy</h4>
@@ -88,32 +97,74 @@
                         </div>
                         <h6 class='space'>Active Policy</h6>
                     </div>
-                        <form='search'>
-                            <input type="text" name="search" placeholder="name - id">
-                        </form>
-                        <form>
-                            <div class="radio">
-                                <label><input type="radio" name="optradio" checked> Accounts  <a href='accounts.html'><u>201</u></a></label>
-                            </div>
-                            <div class="radio">
-                                <label><input type="radio" name="optradio"> Policies  <a href='accounts.html'><u>358</u></a></label>
-                            </div>
-                            <div class="radio">
-                                <label><input type="radio" name="optradio"> Members   <a href='accounts.html'><u>10,651</u></a></label>
-                            </div>
-                            <div class="radio">
-                                <label><input type="radio" name="optradio"> Filings   <a href='accounts.html'><u>1,500</u></a></label>
-                            </div>
-                            <div class="radio">
-                                <label><input type="radio" name="optradio"> Claims    <a href='accounts.html'><u>4,502</u></a></label>
-                            </div>
-                            <div class="radio">
-                                <label><input type="radio" name="optradio"> Notices   <a href='accounts.html'><u>78</u></a></label>
-                            </div>
-                        </form>
+                    <form class='search'>
+                        <input type="text" name="search" placeholder="name - id">
+                    </form>
+                    <form>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" checked> Accounts <a
+                                    href='#'><u>1</u></a></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio"> Policies <a
+                                    href='#'><u>2</u></a></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio"> Members <a
+                                    href='#'><u>324</u></a></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio"> Filings <a
+                                    href='#'><u>75</u></a></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio"> Claims <a
+                                    href='#'><u>204</u></a></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio"> Notices <a
+                                    href='#'><u>4</u></a></label>
+                        </div>
+                    </form>
                 </div>
                 <div class='card card-drill2'>
-                    <p class='drill-it'>Search or Select from the Drill Down Box to the Left.</p>
+                    <h3>Policies</h3>
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <th>Policy</th>
+                            <th>Type</th>
+                            <th>Coverage</th>
+                            <th>Attach Pt</th>
+                            <th>Term</th>
+                            <th>Effective Date</th>
+                            <th>Stop-Loss Admin</th>
+                            <th>Eligibility Coordinator</th>
+
+                        </tr>
+                        <tr>
+                            <td><a href='filings.html'>101</a></td>
+                            <td>Stop-Loss 2018</td>
+                            <td>Agg</td>
+                            <td>Med & Rx</td>
+                            <td>$1,000,000</td>
+                            <td>12/12</td>
+                            <td>1/1/2019</td>
+                            <td>Bruce Wayne</td>
+                            <td>Alfred</td>
+                        </tr>
+                        <tr>
+                            <td><a href='#'>102</a></td>
+                            <td>Stop-Loss Spec 2018</td>
+                            <td>Spec</td>
+                            <td>Med & Rx</td>
+                            <td>$50,000</td>
+                            <td>12/12</td>
+                            <td>1/1/2019</td>
+                            <td>Bruce Wayne</td>
+                            <td>Alfred</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -123,11 +174,16 @@
     </div>
 
     <style>
+        .acct-active {
+            display:flex;
+            justify-content: space-between;
+        }
         .acct-details {
             display: grid;
             grid-gap: 10px;
             grid-template-columns: 3fr 7fr;
             grid-template-rows: 100px;
+            margin-bottom: 20px;
         }
 
         .acct-info {
@@ -135,7 +191,8 @@
             display: grid;
             grid-gap: 10px;
             grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
-            grid-template-rows: 150px;
+            grid-template-rows: 200px;
+            margin-bottom: 20px;
             padding: 20px;
         }
 
@@ -146,23 +203,25 @@
 
         .card {
             background-color: #d9d9d9;
-            height: 150px;
+            height: 200px;
             padding: 5px;
         }
 
         .card-drill {
             align-items: start;
             background-color: #fff;
-            height: 350px;
+            height: 400px;
+            margin-bottom: 20px;
         }
 
         .card-drill2 {
             align-items: start;
             background-color: #fff;
             display: grid;
-            grid-template-columns: 3fr;
-            height: 350px;
-            justify-content: start
+            height: 400px;
+            justify-content: start;
+            margin-bottom: 20px;
+            padding: 30px;
         }
 
         .contain {
@@ -185,7 +244,7 @@
             color: #828282;
             padding-top: 10px;
         }
-        
+
         .drill-it {
             color: #828282;
             font-size: 2em;
@@ -321,6 +380,23 @@
             border-radius: 3px;
             grid-area: sidebar;
             height: 730px;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
         }
 
         #title {
