@@ -36,10 +36,30 @@
                     <a class="nav-link" href="#">Alerts</a>
                 </li>
                 <span class='divider'></span>
+                <li class="nav-item">
+                    <a class="nav-link-active" href="#">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Claims</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Eligibility</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Accounts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Policies</a>
+                </li>
             </ul>
         </div>
+
         <div class='item content'>
-            <h2>Workspace</h2>
+            <ol class="breadcrumb">
+                <li class='breadcrumb-item'><a href='workspace.html'>Workspace</a></li>
+                <li class="breadcrumb-item active">Accounts</li>
+            </ol>
+            <h2>Account</h2>
             <div class='acct-info'>
                 <div class='org-dropdown'>
                     <h3>TPA #1</h3>
@@ -146,7 +166,7 @@
                             <td><a href='#'>Broom Makers</a></td>
                             <td>2</td>
                             <td>Batwoman</td>
-                            <td>Alfred</td>
+                            <td>Batman</td>
                             <td>112</td>
                         </tr>
                         <tr>
@@ -173,48 +193,42 @@
     </div>
 
     <style>
-        .acct-details {
+        /* .acct-details {
             display: grid;
             grid-gap: 10px;
             grid-template-columns: 3fr 7fr;
             grid-template-rows: 100px;
-        }
+        } */
 
-        .acct-info {
+        /* .acct-info {
             background-color: #fff;
             display: grid;
             grid-gap: 10px;
             grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
             grid-template-rows: 150px;
             padding: 20px;
-        }
+        } */
 
-        .active {
-            display:flex;
-            justify-content: space-between;
-        }
-
-        .card {
+        /* .card {
             background-color: #d9d9d9;
             height: 150px;
             padding: 5px;
-        }
+        } */
 
-        .card-drill {
+        /* .card-drill {
             align-items: start;
             background-color: #fff;
             height: 300px;
-        }
+        } */
 
-        .card-drill2 {
+        /* .card-drill2 {
             align-items: start;
             background-color: #fff;
-            display: grid;
             height: 350px;
             justify-content: start;
             padding: 30px;
-        }
-
+        } */
+        /* 
         .contain {
             display: grid;
             grid-gap: 20px;
@@ -224,193 +238,7 @@
             grid-template-areas:
                 "header     header      header"
                 "sidebar    content     content";
-        }
-
-        .content {
-            grid-area: content;
-            margin-right: 20px;
-        }
-
-        .drill {
-            color: #828282;
-            padding-top: 10px;
-        }
-
-        .drill-it {
-            color: #828282;
-            font-size: 2em;
-            padding-top: 100px;
-            text-align: center;
-        }
-
-        .header {
-            display: grid;
-            grid-area: header;
-            grid-template-columns: 2fr 8fr 1fr;
-        }
-
-        input[type=text] {
-            width: 110%;
-            box-sizing: border-box;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-            background-color: white;
-            background-image: url('searchicon.png');
-            background-position: 10px 10px;
-            background-repeat: no-repeat;
-            padding: 12px 20px 12px 40px;
-            -webkit-transition: width 0.4s ease-in-out;
-            transition: width 0.4s ease-in-out;
-        }
-
-        input[type=text]:focus {
-            width: 100%;
-        }
-
-        .links {
-            padding-top: 15px;
-            word-spacing: 20px;
-        }
-
-        .onoffswitch {
-            position: relative;
-            width: 50px;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-        }
-
-        .onoffswitch-checkbox {
-            display: none;
-        }
-
-        .onoffswitch-label {
-            display: block;
-            overflow: hidden;
-            cursor: pointer;
-            border: 2px solid #999999;
-            border-radius: 20px;
-        }
-
-        .onoffswitch-inner {
-            display: block;
-            width: 200%;
-            margin-left: -100%;
-            transition: margin 0.3s ease-in 0s;
-        }
-
-        .onoffswitch-inner:before,
-        .onoffswitch-inner:after {
-            display: block;
-            float: left;
-            width: 50%;
-            height: 30px;
-            padding: 0;
-            line-height: 30px;
-            font-size: 14px;
-            color: white;
-            font-family: Trebuchet, Arial, sans-serif;
-            font-weight: bold;
-            box-sizing: border-box;
-        }
-
-        .onoffswitch-inner:before {
-            content: "";
-            padding-left: 10px;
-            background-color: #428A56;
-            color: #FFFFFF;
-        }
-
-        .onoffswitch-inner:after {
-            content: "";
-            padding-right: 10px;
-            background-color: #EEEEEE;
-            color: #999999;
-            text-align: right;
-        }
-
-        .onoffswitch-switch {
-            display: block;
-            height: 18px;
-            width: 18px;
-            margin: 10px;
-            background: #FFFFFF;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 17px;
-            border: 2px solid #999999;
-            border-radius: 20px;
-            transition: all 0.3s ease-in 0s;
-        }
-
-        .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
-            margin-left: 0;
-        }
-
-        .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
-            right: 0px;
-        }
-
-        .radio {
-            margin-left: 50px;
-        }
-
-        .search {
-            margin: 5px;
-        }
-
-        .space {
-            margin-left: 5px;
-            margin-top: 5px;
-        }
-
-        .sidebar {
-            border: 1px solid var(--black);
-            border-radius: 3px;
-            grid-area: sidebar;
-            height: 730px;
-        }
-
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 110%;
-        }
-
-        td,
-        th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-
-        tr:nth-child(even) {
-            background-color: #dddddd;
-        }
-
-        #title {
-            color: white;
-            background-color: #574f77;
-            background-size: cover;
-            height: cover;
-            padding: 10px;
-            width: cover;
-        }
-
-        .user {
-            padding-top: 15px;
-        }
-
-        @media (max-width: 700px) {
-            .container {
-                grid-template-areas:
-                    "header   header    header"
-                    "content  content   content"
-                    "sidebar  sidebar   sidebar"
-            }
-        }
+        } */
     </style>
 
 </body>

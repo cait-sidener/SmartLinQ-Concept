@@ -5,115 +5,195 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <title>Smart-LinQ</title>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
-
-<style>
-  p {
-    color: var(--black);
-  }
-</style>
 
 <body>
   <div class='contain'>
-      <div class='item header'>
-        <h1>Smart-LinQ</h1>
-        <div class='links'>
-            <a href='#'>TPA#1</a>
-            <a href='index.html'>Dashboard</a>
-            <a href='workspace.html'>Workspace</a>
-            <a href='#'>Lists</a>
+    <div class='item header'>
+      <h1>Smart-LinQ</h1>
+      <div class='links'>
+        <a href='#'>TPA#1</a>
+        <a href='index.html'>Dashboard</a>
+        <a href='workspace.html'>Workspace</a>
+        <a href='#'>Lists</a>
+      </div>
+      <div class='user'>
+        <p>User</p>
+      </div>
+    </div>
+    <div class='item sidebar'>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Filter</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Messages</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Alerts</a>
+        </li>
+        <span class='divider'></span>
+        <li class="nav-item">
+          <a class="nav-link-active" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Claims</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Eligibility</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Accounts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Policies</a>
+        </li>
+      </ul>
+    </div>
+    <div class='item content'>
+      <h2>Dashboard</h2>
+      <div class='charts'>
+        <div id="donutchart" style="width: 500px; height: 420px; padding: 10px;"></div>
+        <div id="columnchart_values" style="width: 600px; height: 420px; padding: 10px;"></div>
+      </div>
+      <div class='charts'>
+        <div class='table-chart'>
+          <p>Outstanding Filings</p>
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Account</th>
+              <th>Carrier</th>
+              <th>Filing Type</th>
+              <th>Filing Date</th>
+              <th>Filing Amount</th>
+            </tr>
+            <tr>
+              <td>Rupert Thorne</td>
+              <td>DMP</td>
+              <td>Symetra</td>
+              <td>Subsequent</td>
+              <td>06/01/2019</td>
+              <td>$14,455</td>
+            </tr>
+            <tr>
+              <td>Harvey Dent</td>
+              <td>DMP</td>
+              <td>Symetra</td>
+              <td>Initial</td>
+              <td>06/15/2019</td>
+              <td>$27,850</td>
+            </tr>
+            <tr>
+              <td>Salena Kyle</td>
+              <td>DMP</td>
+              <td>Symetra</td>
+              <td>Initial</td>
+              <td>06/21/2019</td>
+              <td>$7,899</td>
+            </tr>
+          </table>
         </div>
-        <div class='user'>
-            <p>User</p>
+        <div class='table-chart'>
+          <p>Outstanding Balances</p>
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Filing Date</th>
+              <th>Balance</th>
+            </tr>
+            <tr>
+              <td>Oswald Cobblepot</td>
+              <td>06/01/2019</td>
+              <td>$14,455</td>
+            </tr>
+          </table>
         </div>
       </div>
-      <div class='item sidebar'>
-        <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Filter</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Messages</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Alerts</a>
-            </li>
-            <span class='divider'></span>
-            <li class="nav-item">
-              <a class="nav-link-active" href="#">Dashboard</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Claims</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Eligibility</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Accounts</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Policies</a>
-              </li>
-          </ul>
-      </div>
-      <div class='item content'>
-        <h2>Dashboard</h2>
-        
-
-      </div>
-
+    </div>
   </div>
 
   <style>
-    .contain {
-      display: grid;
-      grid-gap: 20px;
-      grid-template-columns: 2fr 9fr;
-      grid-template-rows: 50px 750px;
-      grid-template: 150px 150px 100px;
-      grid-template-areas: 
-        "header     header      header"
-        "sidebar    content     content"
+    .charts {
+      display: flex;
+      justify-content: space-between;
     }
 
-    .content {
-      grid-area: content;
-      margin-right: 20px;
+    .table-chart {
+      background-color: #fff;
+      margin: 10px;
+      padding: 10px;
+      width: 50%;
     }
-    
-    .header {
-        display: grid;
-        grid-area: header;
-        grid-template-columns: 2fr 8fr 1fr;
-    }
-
-    .links {
-      padding-top: 15px;
-      word-spacing: 20px;
-    }
-
-    .sidebar {
-      border: 1px solid var(--black);
-      border-radius: 3px;
-      grid-area: sidebar;
-    }
-
-    .user {
-      padding-top: 15px;
-    }
-
-    @media (max-width: 700px) {
-      .container {
-        grid-template-areas: 
-        "header   header    header"
-        "content  content   content"
-        "sidebar  sidebar   sidebar"
-      }
-    }
-
   </style>
+
+  <script type="text/javascript">
+    google.charts.load("current", {
+      packages: ["corechart", "bar"]
+    });
+    google.charts.setOnLoadCallback(drawPieHole);
+    google.charts.setOnLoadCallback(drawBarGraph);
+
+    function drawPieHole() {
+      var data = google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['Eligible for Reimbursement', 11],
+        ['Filed', 2],
+        ['Paid', 7]
+      ]);
+
+      var options = {
+        title: 'Receivables',
+        pieHole: 0.3,
+        slices: {
+          0: {
+            color: '#ec991a'
+          },
+          1: {
+            color: '#0e9797'
+          },
+          2: {
+            color: '#19b977'
+          }
+        }
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+      chart.draw(data, options);
+    }
+
+    function drawBarGraph() {
+      var data = google.visualization.arrayToDataTable([
+        ['Date', 'Spend', 'Savings'],
+        ['01/21/2019', 155000, 115000],
+        ['02/26/2019', 125000, 110000],
+        ['03/03/2019', 145000, 13000],
+        ['04/03/2019', 155000, 110000],
+        ['06/01/2019', 170000, 130000]
+      ]);
+
+      var options = {
+        title: 'Domestic Spend vs. Saving',
+        colors: ['#0e9797', '#ec991a'],
+        axes: {
+          x: {
+            0: {
+              side: 'bottom',
+              label: ""
+            }
+          }
+        }
+      };
+
+      var chart = new google.charts.Bar(document.getElementById('columnchart_values'));
+
+      chart.draw(data, google.charts.Bar.convertOptions(options));
+    }
+  </script>
 </body>
 
 </html>

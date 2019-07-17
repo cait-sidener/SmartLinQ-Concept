@@ -36,16 +36,38 @@
                     <a class="nav-link" href="#">Alerts</a>
                 </li>
                 <span class='divider'></span>
+                <li class="nav-item">
+                    <a class="nav-link-active" href="#">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Claims</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Eligibility</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Accounts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Policies</a>
+                </li>
             </ul>
         </div>
         <div class='item content'>
-            <h2>Workspace</h2>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="workspace.html">Workspace</a></li>
+                <li class="breadcrumb-item"><a href="accounts.html">Accounts</a></li>
+                <li class="breadcrumb-item"><a href="policies.html">Aristocrat Inc.</a></li>
+                <li class="breadcrumb-item"><a href="filings.html">Stop-Loss 2018</a></li>
+                <li class="breadcrumb-item"><a href="claims.html">Filing ID 46</a></li>
+                <li class="breadcrumb-item active">Filing ID 46 Notices</li>
+            </ol>
+            <h2>Notices</h2>
             <div class='acct-info'>
                 <div class='org-dropdown'>
                     <h3>TPA #1</h3>
                     <form>
                         <select>
-                            <option value="0">Select User:</option>
                             <option value="1">Bruce Wayne - Admin</option>
                             <option value="2">Robin - Admin</option>
                             <option value="3">Bat Girl - User</option>
@@ -116,16 +138,24 @@
                     </div>
                     <p>3/12/19</p>
                     <p>$0 or $3000</p>
-                   <br />
+                    <br />
                     <p><a href='#'><u>Attachments</u></a></p>
                 </div>
             </div>
 
-            <h3 id='title'>Drill Down</h3>
-            <h3 id='title'>Details & Action</h3>
+            <div class="row">
+                    <div class="column" onclick="openTab('b1');" style="background-color: #574f77; margin-bottom:3%;">
+                      Drill Down
+                    </div>
 
+                    <div class="column" onclick="openTab('b2');" style="background-color: #574f77">
+                            Details & Actions
+                        </div>
+                  </div>
 
-            <div class='acct-details'>
+                <div id="b1" class="containerTab" style="display:none;background:transparent">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <div class='panel acct-details'>
                 <div class='card card-drill'>
                     <div class='active'>
                         <div class="onoffswitch">
@@ -143,7 +173,7 @@
                     </form>
                     <form>
                         <div class="radio">
-                            <label><input type="radio" name="optradio" checked> Accounts <a
+                            <label><input type="radio" name="optradio"> Accounts <a
                                     href='#'><u>1</u></a></label>
                         </div>
                         <div class="radio">
@@ -159,7 +189,7 @@
                             <label><input type="radio" name="optradio"> Claims <a href='#'><u>2</u></a></label>
                         </div>
                         <div class="radio">
-                            <label><input type="radio" name="optradio"> Notices <a href='#'><u>1</u></a></label>
+                            <label><input type="radio" name="optradio" checked> Notices <a href='#'><u>1</u></a></label>
                         </div>
                     </form>
                 </div>
@@ -205,264 +235,141 @@
                     </table>
                 </div>
             </div>
+            </div>
+
+            <div id="b2" class="containerTab" style="display:none;background:transparent">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <h4 style='color: #000'>Claims</h4>
+
+                <div class='tabs'>
+                    <button class="tablink" onclick="openPage('support-files', this, 'grey')"
+                        id="defaultOpen">Supporting
+                        Files</button>
+                    <button class="tablink" onclick="openPage('work-status', this, 'grey')">Work Status</button>
+                    <button class="tablink" onclick="openPage('notes', this, 'grey')">Notes</button>
+                    <button class="tablink" onclick="openPage('notices', this, 'grey')">Notices</button>
+                    <button class="tablink" onclick="openPage('audit', this, 'grey')">Audit</button>
+                </div>
+                <div id="support-files" class="tabcontent">
+                    <h5 style='padding: 10px;'>Supporting Files</h5>
+                </div>
+
+                <div id="work-status" class="tabcontent">
+                    <h5 style='padding: 10px;'>Work Status Form</h5>
+                </div>
+
+                <div id="notes" class="tabcontent">
+                    <h5 style='padding: 10px;'>Notes</h5>
+                </div>
+
+                <div id="notices" class="tabcontent">
+                    <h5 style='padding: 10px;'>Notices</h5>
+                </div>
+
+                <div id="audit" class="tabcontent">
+                    <h5 style='padding: 10px;'>Audit</h5>
+                </div>
+
+            </div>
         </div>
-
-    </div>
-
-    </div>
-
-    <style>
-        .acct-active {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .acct-details {
-            display: grid;
-            grid-gap: 10px;
-            grid-template-columns: 3fr 11fr;
-            grid-template-rows: 100px;
-        }
-
-        .acct-info {
-            background-color: #fff;
-            display: grid;
-            grid-gap: 10px;
-            grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
-            grid-template-rows: 275px;
-            margin-bottom: 20px;
-            padding: 20px;
-        }
-
-        .active {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .card {
-            background-color: #d9d9d9;
-            height: 275px;
-            padding: 5px;
-        }
-
-        .card-drill {
-            align-items: start;
-            background-color: #fff;
-            height: 350px;
-        }
-
-        .card-drill2 {
-            align-items: start;
-            background-color: #fff;
-            height: 350px;
-            justify-content: start;
-            padding: 30px;
-        }
-
-        .contain {
-            display: grid;
-            grid-gap: 20px;
-            grid-template-columns: 2fr 20fr;
-            grid-template-rows: 50px 600px;
-            grid-template: 150px 150px 100px;
-            grid-template-areas:
-                "header     header      header"
-                "sidebar    content     content"
-        }
-
-        .content {
-            grid-area: content;
-            margin-right: 20px;
-            padding-bottom: 10px !important;
-        }
-
-        .drill {
-            color: #828282;
-            padding-top: 10px;
-        }
-
-        .drill-it {
-            color: #828282;
-            font-size: 2em;
-            padding-top: 100px;
-            text-align: center;
-        }
-
-        .header {
-            display: grid;
-            grid-area: header;
-            grid-template-columns: 2fr 8fr 1fr;
-        }
-
-        input[type=text] {
-            width: 100%;
-            box-sizing: border-box;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-            background-color: white;
-            background-image: url('searchicon.png');
-            background-position: 10px 10px;
-            background-repeat: no-repeat;
-            padding: 12px 20px 12px 40px;
-            -webkit-transition: width 0.4s ease-in-out;
-            transition: width 0.4s ease-in-out;
-        }
-
-        input[type=text]:focus {
-            width: 100%;
-        }
-
-        .ins-exp {
-            display: flex;
-            justify-content: space-between
-        }
-
-        .links {
-            padding-top: 15px;
-            word-spacing: 20px;
-        }
-
-        .onoffswitch {
-            position: relative;
-            width: 50px;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-        }
-
-        .onoffswitch-checkbox {
-            display: none;
-        }
-
-        .onoffswitch-label {
-            display: block;
-            overflow: hidden;
-            cursor: pointer;
-            border: 2px solid #999999;
-            border-radius: 20px;
-        }
-
-        .onoffswitch-inner {
-            display: block;
-            width: 200%;
-            margin-left: -100%;
-            transition: margin 0.3s ease-in 0s;
-        }
-
-        .onoffswitch-inner:before,
-        .onoffswitch-inner:after {
-            display: block;
-            float: left;
-            width: 50%;
-            height: 30px;
-            padding: 0;
-            line-height: 30px;
-            font-size: 14px;
-            color: white;
-            font-family: Trebuchet, Arial, sans-serif;
-            font-weight: bold;
-            box-sizing: border-box;
-        }
-
-        .onoffswitch-inner:before {
-            content: "";
-            padding-left: 10px;
-            background-color: #428A56;
-            color: #FFFFFF;
-        }
-
-        .onoffswitch-inner:after {
-            content: "";
-            padding-right: 10px;
-            background-color: #EEEEEE;
-            color: #999999;
-            text-align: right;
-        }
-
-        .onoffswitch-switch {
-            display: block;
-            height: 18px;
-            width: 18px;
-            margin: 10px;
-            background: #FFFFFF;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 17px;
-            border: 2px solid #999999;
-            border-radius: 20px;
-            transition: all 0.3s ease-in 0s;
-        }
-
-        .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
-            margin-left: 0;
-        }
-
-        .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
-            right: 0px;
-        }
-
-        .radio {
-            margin-left: 50px;
-        }
-
-        .sidebar {
-            border: 1px solid var(--black);
-            border-radius: 3px;
-            grid-area: sidebar;
-            height: 820px;
-            margin-bottom: 20px;
-        }
-
-        .search {
-            margin: 5px;
-        }
-
-        .space {
-            margin-left: 5px;
-            margin-top: 5px;
-        }
-
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        td,
-        th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-
-        tr:nth-child(even) {
-            background-color: #dddddd;
-        }
-
-        #title {
-            color: white;
-            background-color: #574f77;
-            background-size: cover;
-            height: cover;
-            padding: 10px;
-            width: cover;
-        }
-
-        .user {
-            padding-top: 15px;
-        }
-
-        @media (max-width: 700px) {
-            .container {
-                grid-template-areas:
-                    "header   header    header"
-                    "content  content   content"
-                    "sidebar  sidebar   sidebar"
+        <style>
+            * {
+                box-sizing: border-box
             }
-        }
-    </style>
+
+            /* Set height of body and the document to 100% */
+            body,
+            html {
+                height: 100%;
+                margin: 0;
+            }
+
+            .column {
+                color: #fff;
+                float: left;
+                width: 100%;
+                padding: 10px;
+                text-align: left;
+                font-size: 25px;
+                cursor: pointer;
+            }
+
+            .containerTab {
+                padding: 20px;
+            }
+
+            /* Clear floats after the columns */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            /* Closable button inside the container tab */
+            .closebtn {
+                float: right;
+                color: #000;
+                font-size: 35px;
+                cursor: pointer;
+            }
+
+            .tabs {
+                display: flex;
+                justify-content: flex-start;
+            }
+
+            /* Style tab links */
+            .tablink {
+                background-color: #d9d9d9;
+                color: #000;
+                border: solid 1px;
+                outline: none;
+                cursor: pointer !important;
+                padding: 10px;
+                font-size: 17px;
+                width: 10%;
+            }
+
+            .tablink:hover {
+                background-color: #d9d9d9;
+            }
+
+            /* Style the tab content (and add height:100% for full page content) */
+            .tabcontent {
+                background-color: #fff;
+                color: #000;
+                display: none;
+                height: 150px;
+            }
+        </style>
+
+        <script>
+            function openPage(pageName, elmnt, color) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablink");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].style.backgroundColor = "";
+                }
+                document.getElementById(pageName).style.display = "block";
+                elmnt.style.backgroundColor = color;
+            }
+
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+
+            function openTab(tabName) {
+                var i, x;
+                x = document.getElementsByClassName("containerTab");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                document.getElementById(tabName).style.display = "block";
+            }
+        </script>
 
 </body>
 

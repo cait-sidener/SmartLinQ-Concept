@@ -1,65 +1,325 @@
 :root {
-    --black: #272727;
-  }
-  
-  html {
-    /* border-box box model allows us to add padding and border to our elements without increasing their size */
-    box-sizing: border-box;
-    /* A system font stack so things load nice and quick! */
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-      Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-weight: 900;
-    color: var(--black);
-    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
-  }
-  
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
+  --black: #272727;
+}
 
-  a:link, a:hover, a:visited {
-   text-decoration: none !important;
-   color: var(--black) !important; 
-  }
-  
-  body {
-    background-color: #f2f2f2 !important;
-  }
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  /* A system font stack so things load nice and quick! */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 900;
+  color: var(--black);
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+}
 
-  .divider {
-    background-color: var(--black);
-    height: 1px;
-    width: 240px;
-    display: block;
-    margin: 10px 0 10px 0;
-  }
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 0 0 5px 0;
-  }
+a:link,
+a:hover,
+a:visited {
+  text-decoration: none !important;
+  color: var(--black) !important;
+}
 
-  .header, .sidebar {
-    background-color: #d9d9d9;
-  }
-  /* Each item in our grid will contain numbers */
-  .item {
-    /* We center the contents of these items. You can also do this with flexbox too! */
-    display: grid;
-    justify-content: start;
-    align-items: start;
-  }
-  
-  .item p {
-    margin: 0 0 5px 0;
-  }
+.acct-active {
+  display: flex;
+  justify-content: space-between;
+}
 
-  ul {
-    list-style: none;
+.acct-details {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 3fr 11fr;
+  grid-template-rows: 100px;
+}
+
+.acct-info {
+  background-color: #fff;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+  grid-template-rows: 275px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.active {
+  display: flex;
+  justify-content: space-between;
+}
+
+body {
+  background-color: #f2f2f2 !important;
+}
+
+.breadcrumb {
+  background: transparent !important;
+}
+
+.card {
+  background-color: #d9d9d9;
+  height: 275px;
+  padding: 5px;
+}
+
+.card-drill {
+  align-items: start;
+  background-color: #fff;
+  height: 350px;
+}
+
+.card-drill2 {
+  align-items: start;
+  background-color: #fff;
+  height: 350px;
+  justify-content: start;
+  padding: 30px;
+}
+
+.contain {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 2fr 20fr;
+  grid-template-rows: 50px 600px;
+  grid-template: 150px 150px 100px;
+  grid-template-areas:
+    "header     header      header"
+    "sidebar    content     content"
+}
+
+.content {
+  grid-area: content;
+  margin-right: 20px;
+  padding-bottom: 10px !important;
+}
+
+.divider {
+  background-color: var(--black);
+  height: 1px;
+  width: 240px;
+  display: block;
+  margin: 10px 0 10px 0;
+}
+
+
+.drill {
+  color: #828282;
+  font-size: 1.1em;
+  padding-top: 80px;
+}
+
+.drill-it {
+  color: #828282;
+  font-size: 2em;
+  padding-top: 100px;
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 5px 0;
+}
+
+.header,
+.sidebar {
+  background-color: #d9d9d9;
+}
+
+.header {
+  display: grid;
+  grid-area: header;
+  grid-template-columns: 2fr 8fr 1fr;
+}
+
+input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
+
+.ins-exp {
+  display: flex;
+  justify-content: space-between
+}
+
+/* Each item in our grid will contain numbers */
+.item {
+  /* We center the contents of these items. You can also do this with flexbox too! */
+  display: grid;
+  justify-content: start;
+  align-items: start;
+}
+
+.item p {
+  margin: 0 0 5px 0;
+}
+
+.links {
+  padding-top: 15px;
+  word-spacing: 20px;
+}
+
+.onoffswitch {
+  position: relative;
+  width: 50px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.onoffswitch-checkbox {
+  display: none;
+}
+
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #999999;
+  border-radius: 20px;
+}
+
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.onoffswitch-inner:before {
+  content: "";
+  padding-left: 10px;
+  background-color: #428A56;
+  color: #FFFFFF;
+}
+
+.onoffswitch-inner:after {
+  content: "";
+  padding-right: 10px;
+  background-color: #EEEEEE;
+  color: #999999;
+  text-align: right;
+}
+
+.onoffswitch-switch {
+  display: block;
+  height: 20px;
+  width: 20px;
+  margin: 7px 3px 0px 0px;
+  background: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 17px;
+  border: 2px solid #999999;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}
+
+.radio {
+  margin-left: 50px;
+}
+
+.search {
+  margin: 5px;
+}
+
+.space {
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.sidebar {
+  border: 1px solid var(--black);
+  border-radius: 3px;
+  grid-area: sidebar;
+  height: 830px;
+}
+
+table {
+  font-size: 0.9em;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+#title {
+  color: white;
+  background-color: #574f77;
+  background-size: cover;
+  height: cover;
+  padding: 10px;
+  width: cover;
+}
+
+ul {
+  list-style: none;
+}
+
+.user {
+  padding-top: 15px;
+}
+
+@media (max-width: 700px) {
+  .container {
+    grid-template-areas:
+      "header   header    header"
+      "content  content   content"
+      "sidebar  sidebar   sidebar"
   }
+}

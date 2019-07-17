@@ -36,16 +36,37 @@
                     <a class="nav-link" href="#">Alerts</a>
                 </li>
                 <span class='divider'></span>
+                <li class="nav-item">
+                    <a class="nav-link-active" href="#">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Claims</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Eligibility</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Accounts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Policies</a>
+                </li>
             </ul>
         </div>
         <div class='item content'>
-            <h2>Workspace</h2>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="workspace.html">Workspace</a></li>
+                <li class="breadcrumb-item"><a href="accounts.html">Accounts</a></li>
+                <li class="breadcrumb-item"><a href="policies.html">Aristocrat Inc.</a></li>
+                <li class="breadcrumb-item"><a href="filings.html">Stop-Loss 2018</a></li>
+                <li class="breadcrumb-item active">Filing ID 46</li>
+            </ol>
+            <h2>Claim</h2>
             <div class='acct-info'>
                 <div class='org-dropdown'>
                     <h3>TPA #1</h3>
                     <form>
                         <select>
-                            <option value="0">Select User:</option>
                             <option value="1">Bruce Wayne - Admin</option>
                             <option value="2">Robin - Admin</option>
                             <option value="3">Bat Girl - User</option>
@@ -93,362 +114,109 @@
                         <p style='color:#428A56'><b>Ready to Submit</b></p>
                     </div>
                     <div class='acct-active'>
-                    <p style='color:#574f77'><b>46 - Rupert Thorne</b></p>
-                    <p>Subsequent</p>
+                        <p style='color:#574f77'><b>46 - Rupert Thorne</b></p>
+                        <p>Subsequent</p>
+                    </div>
+                    <p>3/12/19</p>
+                    <p>$0 or $3454</p>
+                    <div class='ins-exp'>
+                        <p>2 Claims</p>
+                        <p>L03.125</p>
+                    </div>
+                    <p><a href='#'><u>Cover Letter</u></a></p>
                 </div>
-                <p>3/12/19</p>
-                <p>$0 or $3454</p>
-                <div class='ins-exp'>
-                    <p>2 Claims</p>
-                    <p>L03.125</p>
+                <div class='card'>
+                    <h4>Claim</h4>
+                    <p class='drill'>Drill Down Below</p>
                 </div>
-                <p><a href='#'><u>Cover Letter</u></a></p>
             </div>
-            <div class='card'>
-                <h4>Claim</h4>
-                <p class='drill'>Drill Down Below</p>
+
+            <h3 id='title'>Drill Down</h3>
+
+            <div class='acct-details'>
+                <div class='card card-drill'>
+                    <div class='active'>
+                        <div class="onoffswitch">
+                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch"
+                                checked>
+                            <label class="onoffswitch-label" for="myonoffswitch">
+                                <span class="onoffswitch-inner"></span>
+                                <span class="onoffswitch-switch"></span>
+                            </label>
+                        </div>
+                        <h6 class='space'>Active Policy</h6>
+                    </div>
+                    <form class='search'>
+                        <input type="text" name="search" placeholder="name - id">
+                    </form>
+                    <form>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio"> Accounts <a href='#'><u>1</u></a></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio"> Policies <a href='#'><u>1</u></a></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio"> Members <a href='#'><u>1</u></a></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio"> Filings <a href='#'><u>1</u></a></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio" checked> Claims <a href='#'><u>2</u></a></label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio"> Notices <a href='#'><u>1</u></a></label>
+                        </div>
+                    </form>
+                </div>
+                <div class='card card-drill2'>
+                    <h3>Filings</h3>
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Status</th>
+                            <th>Filing Amount</th>
+                            <th>Last Paid</th>
+                            <th>Paid</th>
+                            <th>Deductible</th>
+                            <th>Filing Type</th>
+                            <th>Dx</th>
+                        </tr>
+                        <tr>
+                            <td><a href='claimDetails.html'>20-234</a></td>
+                            <td>Rupert</td>
+                            <td>Thorne</td>
+                            <td>In Progress</td>
+                            <td>$3000</td>
+                            <td>3/12/19</td>
+                            <td>$340,000</td>
+                            <td>$100</td>
+                            <td>Subsequent</td>
+                            <td>L03.125</td>
+                        </tr>
+                        <tr>
+                            <td><a href='#'>20-235</a></td>
+                            <td>Rupert</td>
+                            <td>Thorne</td>
+                            <td>In Process</td>
+                            <td>$454</td>
+                            <td>3/12/19</td>
+                            <td>$340,000</td>
+                            <td>$100</td>
+                            <td>Subsequent</td>
+                            <td>L03.125</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
 
-        <h3 id='title'>Drill Down</h3>
-
-        <div class='acct-details'>
-            <div class='card card-drill'>
-                <div class='active'>
-                    <div class="onoffswitch">
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch"
-                            checked>
-                        <label class="onoffswitch-label" for="myonoffswitch">
-                            <span class="onoffswitch-inner"></span>
-                            <span class="onoffswitch-switch"></span>
-                        </label>
-                    </div>
-                    <h6 class='space'>Active Policy</h6>
-                </div>
-                <form class='search'>
-                    <input type="text" name="search" placeholder="name - id">
-                </form>
-                <form>
-                    <div class="radio">
-                        <label><input type="radio" name="optradio" checked> Accounts <a href='#'><u>1</u></a></label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" name="optradio"> Policies <a href='#'><u>1</u></a></label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" name="optradio"> Members <a href='#'><u>1</u></a></label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" name="optradio"> Filings <a href='#'><u>1</u></a></label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" name="optradio"> Claims <a href='#'><u>2</u></a></label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" name="optradio"> Notices <a href='#'><u>1</u></a></label>
-                    </div>
-                </form>
-            </div>
-            <div class='card card-drill2'>
-                <h3>Filings</h3>
-                <table>
-                    <tr>
-                        <th>ID</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Status</th>
-                        <th>Filing Amount</th>
-                        <th>Last Paid</th>
-                        <th>Paid</th>
-                        <th>Deductible</th>
-                        <th>Filing Type</th>
-                        <th>Dx</th>
-                    </tr>
-                    <tr>
-                        <td><a href='claimDetails.html'>20-234</a></td>
-                        <td>Rupert</td>
-                        <td>Thorne</td>
-                        <td>In Progress</td>
-                        <td>$3000</td>
-                        <td>3/12/19</td>
-                        <td>$340,000</td>
-                        <td>$100</td>
-                        <td>Subsequent</td>
-                        <td>L03.125</td>
-                    </tr>
-                    <tr>
-                        <td><a href='#'>20-235</a></td>
-                        <td>Rupert</td>
-                        <td>Thorne</td>
-                        <td>In Process</td>
-                        <td>$454</td>
-                        <td>3/12/19</td>
-                        <td>$340,000</td>
-                        <td>$100</td>
-                        <td>Subsequent</td>
-                        <td>L03.125</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
     </div>
 
     </div>
-
-    </div>
-
-    <style>
-        .acct-active {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .acct-details {
-            display: grid;
-            grid-gap: 10px;
-            grid-template-columns: 3fr 11fr;
-            grid-template-rows: 100px;
-        }
-
-        .acct-info {
-            background-color: #fff;
-            display: grid;
-            grid-gap: 10px;
-            grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
-            grid-template-rows: 275px;
-            margin-bottom: 20px;
-            padding: 20px;
-        }
-
-        .active {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .card {
-            background-color: #d9d9d9;
-            height: 275px;
-            padding: 5px;
-        }
-
-        .card-drill {
-            align-items: start;
-            background-color: #fff;
-            height: 350px;
-        }
-
-        .card-drill2 {
-            align-items: start;
-            background-color: #fff;
-            height: 350px;
-            justify-content: start;
-            padding: 30px;
-        }
-
-        .contain {
-            display: grid;
-            grid-gap: 20px;
-            grid-template-columns: 2fr 20fr;
-            grid-template-rows: 50px 600px;
-            grid-template: 150px 150px 100px;
-            grid-template-areas:
-                "header     header      header"
-                "sidebar    content     content"
-        }
-
-        .content {
-            grid-area: content;
-            margin-right: 20px;
-            padding-bottom: 10px !important;
-        }
-
-        .drill {
-            color: #828282;
-            padding-top: 10px;
-        }
-
-        .drill-it {
-            color: #828282;
-            font-size: 2em;
-            padding-top: 100px;
-            text-align: center;
-        }
-
-        .header {
-            display: grid;
-            grid-area: header;
-            grid-template-columns: 2fr 8fr 1fr;
-        }
-
-        input[type=text] {
-            width: 100%;
-            box-sizing: border-box;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-            background-color: white;
-            background-image: url('searchicon.png');
-            background-position: 10px 10px;
-            background-repeat: no-repeat;
-            padding: 12px 20px 12px 40px;
-            -webkit-transition: width 0.4s ease-in-out;
-            transition: width 0.4s ease-in-out;
-        }
-
-        input[type=text]:focus {
-            width: 100%;
-        }
-
-        .ins-exp {
-            display: flex;
-            justify-content: space-between
-        }
-
-        .links {
-            padding-top: 15px;
-            word-spacing: 20px;
-        }
-
-        .onoffswitch {
-            position: relative;
-            width: 50px;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-        }
-
-        .onoffswitch-checkbox {
-            display: none;
-        }
-
-        .onoffswitch-label {
-            display: block;
-            overflow: hidden;
-            cursor: pointer;
-            border: 2px solid #999999;
-            border-radius: 20px;
-        }
-
-        .onoffswitch-inner {
-            display: block;
-            width: 200%;
-            margin-left: -100%;
-            transition: margin 0.3s ease-in 0s;
-        }
-
-        .onoffswitch-inner:before,
-        .onoffswitch-inner:after {
-            display: block;
-            float: left;
-            width: 50%;
-            height: 30px;
-            padding: 0;
-            line-height: 30px;
-            font-size: 14px;
-            color: white;
-            font-family: Trebuchet, Arial, sans-serif;
-            font-weight: bold;
-            box-sizing: border-box;
-        }
-
-        .onoffswitch-inner:before {
-            content: "";
-            padding-left: 10px;
-            background-color: #428A56;
-            color: #FFFFFF;
-        }
-
-        .onoffswitch-inner:after {
-            content: "";
-            padding-right: 10px;
-            background-color: #EEEEEE;
-            color: #999999;
-            text-align: right;
-        }
-
-        .onoffswitch-switch {
-            display: block;
-            height: 18px;
-            width: 18px;
-            margin: 10px;
-            background: #FFFFFF;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 17px;
-            border: 2px solid #999999;
-            border-radius: 20px;
-            transition: all 0.3s ease-in 0s;
-        }
-
-        .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner {
-            margin-left: 0;
-        }
-
-        .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
-            right: 0px;
-        }
-
-        .radio {
-            margin-left: 50px;
-        }
-
-        .sidebar {
-            border: 1px solid var(--black);
-            border-radius: 3px;
-            grid-area: sidebar;
-            height: 820px;
-            margin-bottom: 20px;
-        }
-
-        .search {
-            margin: 5px;
-        }
-
-        .space {
-            margin-left: 5px;
-            margin-top: 5px;
-        }
-
-        table {
-            font-family: arial, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        td,
-        th {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-
-        tr:nth-child(even) {
-            background-color: #dddddd;
-        }
-
-        #title {
-            color: white;
-            background-color: #574f77;
-            background-size: cover;
-            height: cover;
-            padding: 10px;
-            width: cover;
-        }
-
-        .user {
-            padding-top: 15px;
-        }
-
-        @media (max-width: 700px) {
-            .container {
-                grid-template-areas:
-                    "header   header    header"
-                    "content  content   content"
-                    "sidebar  sidebar   sidebar"
-            }
-        }
-    </style>
 
 </body>
 
