@@ -36,12 +36,12 @@
     <div class='item content'>
       <h2>Dashboard</h2>
       <div class='charts'>
-        <div id="donutchart" style="width: 650px; height: 420px; padding: 10px;"></div>
+        <div id="donutchart" style="height: 420px; padding: 10px;"></div>
         <div id='stacked_bar' style='padding: 10px;'></div>
 
       </div>
       <div class='charts'>
-        <div class='table-chart'>
+        <div class='table-chart' style='height:130%'>
           <p>Outstanding Filings</p>
           <table>
             <tr>
@@ -78,10 +78,10 @@
             </tr>
           </table>
         </div>
-        <div id="columnchart_values" style="width: 700px; height: 420px; padding: 10px;"></div>
+        <div id="columnchart_values" style="height: 420px; padding: 10px;"></div>
       </div>
       <div class='charts'>
-          <div class='table-chart'>
+          <div class='table-chart' style='width: 44.2%; margin-top: -14%;'>
               <p>Outstanding Balances</p>
               <table>
                 <tr>
@@ -164,6 +164,7 @@
 
       var options = {
         title: 'Domestic Spend vs. Saving',
+        width: 700,
         colors: ['#0e9797', '#ec991a'],
         axes: {
           x: {
@@ -193,7 +194,7 @@
       ]);
 
         var options = {
-        width: 650,
+        width: 880,
         height: 400,
         legend: { position: 'bottom', maxLines: 3, textStyle: {color: 'black', fontSize: 16 } },
 		isStacked: true,
