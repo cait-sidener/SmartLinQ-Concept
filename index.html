@@ -17,7 +17,15 @@
       <h1>Smart-LinQ</h1>
       <div class='links'>
         <a href='#'>TPA#1</a>
-        <a href='index.html'>Dashboard</a>
+        <div class='dropdown'>
+          <a href='index.html'>Dashboard</a>
+          <div class='dropdown-content'>
+            <a href='index.html'>Claims</a>
+            <a href='index.html'>Eligibility</a>
+            <a href='index.html'>Accounts</a>
+            <a href='index.html'>Policies</a>
+          </div>
+        </div>
         <a href='workspace.html'>Workspace</a>
         <a href='#'>Lists</a>
       </div>
@@ -25,40 +33,11 @@
         <p>User</p>
       </div>
     </div>
-    <div class='item sidebar'>
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Filter</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Messages</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Alerts</a>
-        </li>
-        <span class='divider'></span>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Dashboard</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Claims</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Eligibility</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Accounts</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Policies</a>
-        </li>
-      </ul>
-    </div>
     <div class='item content'>
       <h2>Dashboard</h2>
       <div class='charts'>
-        <div id="donutchart" style="width: 500px; height: 420px; padding: 10px;"></div>
-        <div id="columnchart_values" style="width: 600px; height: 420px; padding: 10px;"></div>
+        <div id="donutchart" style="width: 650px; height: 420px; padding: 10px;"></div>
+        <div id="columnchart_values" style="width: 700px; height: 420px; padding: 10px;"></div>
       </div>
       <div class='charts'>
         <div class='table-chart'>
@@ -73,7 +52,7 @@
               <th>Filing Amount</th>
             </tr>
             <tr>
-              <td>Rupert Thorne</td>
+              <td><a href='notices.html'>Rupert Thorne</a></td>
               <td>DMP</td>
               <td>Symetra</td>
               <td>Subsequent</td>

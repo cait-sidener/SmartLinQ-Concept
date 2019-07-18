@@ -16,7 +16,15 @@
             <h1>Smart-LinQ</h1>
             <div class='links'>
                 <a href='#'>TPA#1</a>
-                <a href='index.html'>Dashboard</a>
+                <div class='dropdown'>
+                    <a href='index.html'>Dashboard</a>
+                    <div class='dropdown-content'>
+                        <a href='index.html'>Claims</a>
+                        <a href='index.html'>Eligibility</a>
+                        <a href='index.html'>Accounts</a>
+                        <a href='index.html'>Policies</a>
+                    </div>
+                </div>
                 <a href='workspace.html'>Workspace</a>
                 <a href='#'>Lists</a>
             </div>
@@ -24,35 +32,7 @@
                 <p>User</p>
             </div>
         </div>
-        <div class='item sidebar'>
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Filter</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Messages</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Alerts</a>
-                </li>
-                <span class='divider'></span>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Claims</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Eligibility</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Accounts</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Policies</a>
-                </li>
-            </ul>
-        </div>
+
         <div class='item content'>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="workspace.html">Workspace</a></li>
@@ -79,7 +59,7 @@
                 </div>
                 <div class='card'>
                     <div class='acct-active'>
-                        <h4>Account</h4>
+                        <h4><a href='policies.html'>Account</a></h4>
                         <p style='color:#428A56'><b>Active</b></p>
                     </div>
                     <p style='color:#574f77'><b>0004 Aristocrat Inc</b></p>
@@ -92,7 +72,7 @@
                 </div>
                 <div class='card'>
                     <div class='acct-active'>
-                        <h4>Policy</h4>
+                        <h4><a href='filings.html'>Policy</a></h4>
                         <p style='color:#428A56'><b>Active</b></p>
                     </div>
                     <p style='color:#574f77'><b>101 Stop-Loss 2018</b></p>
@@ -112,7 +92,7 @@
                 </div>
                 <div class='card'>
                     <div class='acct-active'>
-                        <h4>Filing</h4>
+                        <h4><a href='claims.html'>Filing</a></h4>
                         <p style='color:#428A56'><b>Ready to Submit</b></p>
                     </div>
                     <div class='acct-active'>
@@ -144,102 +124,102 @@
             </div>
 
             <div class="row">
-                    <div class="column" onclick="openTab('b1');" style="background-color: #574f77; margin-bottom:3%;">
-                      Drill Down
-                    </div>
-
-                    <div class="column" onclick="openTab('b2');" style="background-color: #574f77">
-                            Details & Actions
-                        </div>
-                  </div>
-
-                <div id="b1" class="containerTab" style="display:none;background:transparent">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-            <div class='panel acct-details'>
-                <div class='card card-drill'>
-                    <div class='active'>
-                        <div class="onoffswitch">
-                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch"
-                                checked>
-                            <label class="onoffswitch-label" for="myonoffswitch">
-                                <span class="onoffswitch-inner"></span>
-                                <span class="onoffswitch-switch"></span>
-                            </label>
-                        </div>
-                        <h6 class='space'>Active Policy</h6>
-                    </div>
-                    <form class='search'>
-                        <input type="text" name="search" placeholder="name - id">
-                    </form>
-                    <form>
-                        <div class="radio">
-                            <label><input type="radio" name="optradio"> Accounts <a
-                                    href='#'><u>1</u></a></label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="optradio"> Policies <a href='#'><u>1</u></a></label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="optradio"> Members <a href='#'><u>1</u></a></label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="optradio"> Filings <a href='#'><u>1</u></a></label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="optradio"> Claims <a href='#'><u>2</u></a></label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="optradio" checked> Notices <a href='#'><u>1</u></a></label>
-                        </div>
-                    </form>
+                <div class="column" onclick="openTab('b1');" style="background-color: #574f77; margin-bottom:3%;">
+                    Drill Down
                 </div>
-                <div class='card card-drill2'>
-                    <h3>Filings</h3>
-                    <table>
-                        <tr>
-                            <th>ID</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Status</th>
-                            <th>Filing Amount</th>
-                            <th>Last Paid</th>
-                            <th>Paid</th>
-                            <th>Deductible</th>
-                            <th>Filing Type</th>
-                            <th>Dx</th>
-                        </tr>
-                        <tr>
-                            <td><a href='claimDetails.html'>20-234</a></td>
-                            <td>Rupert</td>
-                            <td>Thorne</td>
-                            <td>In Progress</td>
-                            <td>$3000</td>
-                            <td>3/12/19</td>
-                            <td>$340,000</td>
-                            <td>$100</td>
-                            <td>Subsequent</td>
-                            <td>L03.125</td>
-                        </tr>
-                        <tr>
-                            <td><a href='#'>20-235</a></td>
-                            <td>Rupert</td>
-                            <td>Thorne</td>
-                            <td>In Process</td>
-                            <td>$454</td>
-                            <td>3/12/19</td>
-                            <td>$340,000</td>
-                            <td>$100</td>
-                            <td>Subsequent</td>
-                            <td>L03.125</td>
-                        </tr>
-                    </table>
+
+                <div class="column" onclick="openTab('b2');" style="background-color: #574f77">
+                    Details & Actions
                 </div>
             </div>
+
+            <div id="b1" class="containerTab" style="display:none;background:transparent">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <div class='panel acct-details'>
+                    <div class='card card-drill'>
+                        <div class='active'>
+                            <div class="onoffswitch">
+                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox"
+                                    id="myonoffswitch" checked>
+                                <label class="onoffswitch-label" for="myonoffswitch">
+                                    <span class="onoffswitch-inner"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                            </div>
+                            <h6 class='space'>Active Policy</h6>
+                        </div>
+                        <form class='search'>
+                            <input type="text" name="search" placeholder="name - id">
+                        </form>
+                        <form>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio"> Accounts <a href='#'><u>1</u></a></label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio"> Policies <a href='#'><u>1</u></a></label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio"> Members <a href='#'><u>1</u></a></label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio"> Filings <a href='#'><u>1</u></a></label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio"> Claims <a href='#'><u>2</u></a></label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio" checked> Notices <a
+                                        href='#'><u>1</u></a></label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class='card card-drill2'>
+                        <h3>Filings</h3>
+                        <table>
+                            <tr>
+                                <th>ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Status</th>
+                                <th>Filing Amount</th>
+                                <th>Last Paid</th>
+                                <th>Paid</th>
+                                <th>Deductible</th>
+                                <th>Filing Type</th>
+                                <th>Dx</th>
+                            </tr>
+                            <tr>
+                                <td><a href='claimDetails.html'>20-234</a></td>
+                                <td>Rupert</td>
+                                <td>Thorne</td>
+                                <td>In Progress</td>
+                                <td>$3000</td>
+                                <td>3/12/19</td>
+                                <td>$340,000</td>
+                                <td>$100</td>
+                                <td>Subsequent</td>
+                                <td>L03.125</td>
+                            </tr>
+                            <tr>
+                                <td><a href='#'>20-235</a></td>
+                                <td>Rupert</td>
+                                <td>Thorne</td>
+                                <td>In Process</td>
+                                <td>$454</td>
+                                <td>3/12/19</td>
+                                <td>$340,000</td>
+                                <td>$100</td>
+                                <td>Subsequent</td>
+                                <td>L03.125</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
 
             <div id="b2" class="containerTab" style="display:none;background:transparent">
                 <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-                <h4 style='color: #000'>Claims</h4>
+                <h4 style='color: #000'>Notices</h4>
 
                 <div class='tabs'>
                     <button class="tablink" onclick="openPage('support-files', this, 'grey')"
@@ -286,9 +266,9 @@
 
             .column {
                 color: #fff;
-                float: left;
-                margin-left: 10px;
-                width: 90%;
+                margin-left: 15px;
+                margin-right: 15px;
+                width: 100%;
                 padding: 10px;
                 text-align: left;
                 font-size: 25px;

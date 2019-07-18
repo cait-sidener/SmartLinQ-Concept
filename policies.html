@@ -16,7 +16,15 @@
             <h1>Smart-LinQ</h1>
             <div class='links'>
                 <a href='#'>TPA#1</a>
-                <a href='index.html'>Dashboard</a>
+                <div class='dropdown'>
+                    <a href='index.html'>Dashboard</a>
+                    <div class='dropdown-content'>
+                        <a href='index.html'>Claims</a>
+                        <a href='index.html'>Eligibility</a>
+                        <a href='index.html'>Accounts</a>
+                        <a href='index.html'>Policies</a>
+                    </div>
+                </div>
                 <a href='workspace.html'>Workspace</a>
                 <a href='#'>Lists</a>
             </div>
@@ -24,35 +32,7 @@
                 <p>User</p>
             </div>
         </div>
-        <div class='item sidebar'>
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Filter</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Messages</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Alerts</a>
-                </li>
-                <span class='divider'></span>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Claims</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Eligibility</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Accounts</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Policies</a>
-                </li>
-            </ul>
-        </div>
+
         <div class='item content'>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href='workspace.html'>Workspace</a></li>
@@ -159,7 +139,7 @@
                         </tr>
                         <tr>
                             <td><a href='filings.html'>101</a></td>
-                            <td>Stop-Loss 2018</td>
+                            <td><a href='filings.html'>Stop-Loss 2018</a></td>
                             <td>Agg</td>
                             <td>Med & Rx</td>
                             <td>$1,000,000</td>
@@ -181,66 +161,11 @@
                         </tr>
                     </table>
                 </div>
+                <div class='item footer'></div>
+
             </div>
+
         </div>
-
-    </div>
-
-    </div>
-
-    <style>
-        /* .acct-details {
-            display: grid;
-            grid-gap: 10px;
-            grid-template-columns: 3fr 7fr;
-            grid-template-rows: 100px;
-            margin-bottom: 20px;
-        } */
-
-        /* .acct-info {
-            background-color: #fff;
-            display: grid;
-            grid-gap: 10px;
-            grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
-            grid-template-rows: 200px;
-            margin-bottom: 20px;
-            padding: 20px;
-        } */
-
-        /* .card {
-            background-color: #d9d9d9;
-            height: 200px;
-            padding: 5px;
-        } */
-
-        /* .card-drill {
-            align-items: start;
-            background-color: #fff;
-            height: 400px;
-            margin-bottom: 20px;
-        } */
-
-        /* .card-drill2 {
-            align-items: start;
-            background-color: #fff;
-            height: 400px;
-            justify-content: start;
-            margin-bottom: 20px;
-            padding: 30px;
-        } */
-
-        /* .contain {
-            display: grid;
-            grid-gap: 20px;
-            grid-template-columns: 2fr 9fr;
-            grid-template-rows: 50px 450px;
-            grid-template: 150px 150px 100px;
-            grid-template-areas:
-                "header     header      header"
-                "sidebar    content     content";
-        } */
-    </style>
-
 </body>
 
 </html>

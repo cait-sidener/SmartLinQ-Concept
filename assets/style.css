@@ -84,18 +84,19 @@ body {
 .contain {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: 2fr 20fr;
+  grid-template-columns: 20fr;
   grid-template-rows: 50px 600px;
   grid-template: 150px 150px 100px;
   grid-template-areas:
     "header     header      header"
-    "sidebar    content     content"
+    "content    content     content"
+    "footer     footer      footer"
 }
 
 .content {
   grid-area: content;
+  margin-left: 20px;
   margin-right: 20px;
-  padding-bottom: 10px !important;
 }
 
 .divider {
@@ -105,7 +106,6 @@ body {
   display: block;
   margin: 10px 0 10px 0;
 }
-
 
 .drill {
   color: #828282;
@@ -120,7 +120,35 @@ body {
   text-align: center;
 }
 
-h1,
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.footer {
+  background-color: #f2f2f2;
+  display: grid;
+  grid-area: footer;
+}
+
+h1 {
+  margin: 20px;
+}
+
 h2,
 h3,
 h4,
@@ -137,7 +165,7 @@ h6 {
 .header {
   display: grid;
   grid-area: header;
-  grid-template-columns: 2fr 8fr 1fr;
+  grid-template-columns: 4fr 12fr 1fr;
 }
 
 input[type=text] {
@@ -272,13 +300,6 @@ input[type=text]:focus {
 .space {
   margin-left: 5px;
   margin-top: 5px;
-}
-
-.sidebar {
-  border: 1px solid var(--black);
-  border-radius: 3px;
-  grid-area: sidebar;
-  height: 830px;
 }
 
 table {

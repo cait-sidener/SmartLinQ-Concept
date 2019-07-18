@@ -16,43 +16,22 @@
             <h1>Smart-LinQ</h1>
             <div class='links'>
                 <a href='#'>TPA#1</a>
-                <a href='index.html'>Dashboard</a>
-                <a href='workspace.html'>Workspace</a>
+                <div class='dropdown'>
+                    <a href='index.html'>Dashboard</a>
+                    <div class='dropdown-content'>
+                        <a href='index.html'>Claims</a>
+                        <a href='index.html'>Eligibility</a>
+                        <a href='index.html'>Accounts</a>
+                        <a href='index.html'>Policies</a>
+                    </div>
+                </div>
                 <a href='#'>Lists</a>
             </div>
             <div class='user'>
                 <p>User</p>
             </div>
         </div>
-        <div class='item sidebar'>
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Filter</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Messages</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Alerts</a>
-                </li>
-                <span class='divider'></span>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Claims</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Eligibility</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Accounts</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Policies</a>
-                </li>
-            </ul>
-        </div>
+
         <div class='item content'>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="workspace.html">Workspace</a></li>
@@ -61,7 +40,7 @@
                 <li class="breadcrumb-item"><a href="filings.html">Stop-Loss 2018</a></li>
                 <li class="breadcrumb-item active">Filing ID 46</li>
             </ol>
-            <h2>Claim</h2>
+            <h2>Claims</h2>
             <div class='acct-info'>
                 <div class='org-dropdown'>
                     <h3>TPA #1</h3>
@@ -78,7 +57,7 @@
                 </div>
                 <div class='card'>
                     <div class='acct-active'>
-                        <h4>Account</h4>
+                        <h4><a href='policies.html'>Account</a></h4>
                         <p style='color:#428A56'><b>Active</b></p>
                     </div>
                     <p style='color:#574f77'><b>0004 Aristocrat Inc</b></p>
@@ -91,7 +70,7 @@
                 </div>
                 <div class='card'>
                     <div class='acct-active'>
-                        <h4>Policy</h4>
+                        <h4><a href='filings.html'>Policy</a></h4>
                         <p style='color:#428A56'><b>Active</b></p>
                     </div>
                     <p style='color:#574f77'><b>101 Stop-Loss 2018</b></p>
@@ -171,7 +150,7 @@
                     </form>
                 </div>
                 <div class='card card-drill2'>
-                    <h3>Filings</h3>
+                    <h3>Claims</h3>
                     <table>
                         <tr>
                             <th>ID</th>
@@ -186,9 +165,9 @@
                             <th>Dx</th>
                         </tr>
                         <tr>
-                            <td><a href='claimDetails.html'>20-234</a></td>
-                            <td>Rupert</td>
-                            <td>Thorne</td>
+                            <td><a href='notices.html'>20-234</a></td>
+                            <td><a href='notices.html'>Rupert</a></td>
+                            <td><a href='notices.html'>Thorne</a></td>
                             <td>In Progress</td>
                             <td>$3000</td>
                             <td>3/12/19</td>
