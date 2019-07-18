@@ -124,11 +124,11 @@
             </div>
 
             <div class="row">
-                <div class="column" onclick="openTab('b1');" style="background-color: #574f77; margin-bottom:3%;">
+                <div id='drill' class="column" onclick="openTab('b1');" style="background-color: #574f77; margin-bottom:3%;">
                     Drill Down
                 </div>
 
-                <div class="column" onclick="openTab('b2');" style="background-color: #574f77">
+                <div id='details' class="column" onclick="openTab('b2');" style="background-color: #574f77; margin-bottom:3%;">
                     Details & Actions
                 </div>
             </div>
@@ -219,7 +219,7 @@
 
             <div id="b2" class="containerTab" style="display:none;background:transparent">
                 <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-                <h4 style='color: #000'>Notices</h4>
+                <h4 style='color: #000; margin-top: -2%;'>Notices</h4>
 
                 <div class='tabs'>
                     <button class="tablink" onclick="openPage('support-files', this, 'grey')"
@@ -265,14 +265,14 @@
             }
 
             .column {
+                align-items: space-between;
                 color: #fff;
-                margin-left: 15px;
-                margin-right: 15px;
-                width: 100%;
+                cursor: pointer;
+                display: flex;
+                font-size: 25px;
                 padding: 10px;
                 text-align: left;
-                font-size: 25px;
-                cursor: pointer;
+                width: 49%;
             }
 
             .containerTab {
@@ -292,6 +292,15 @@
                 color: #000;
                 font-size: 35px;
                 cursor: pointer;
+            }
+
+            #details {
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            #drill {
+                margin-left: 15px;
             }
 
             .tabs {
