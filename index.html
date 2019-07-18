@@ -37,7 +37,8 @@
       <h2>Dashboard</h2>
       <div class='charts'>
         <div id="donutchart" style="width: 650px; height: 420px; padding: 10px;"></div>
-        <div id="columnchart_values" style="width: 700px; height: 420px; padding: 10px;"></div>
+        <div id='stacked_bar' style='padding: 10px;'></div>
+
       </div>
       <div class='charts'>
         <div class='table-chart'>
@@ -77,21 +78,25 @@
             </tr>
           </table>
         </div>
-        <div class='table-chart'>
-          <p>Outstanding Balances</p>
-          <table>
-            <tr>
-              <th>Name</th>
-              <th>Filing Date</th>
-              <th>Balance</th>
-            </tr>
-            <tr>
-              <td>Oswald Cobblepot</td>
-              <td>06/01/2019</td>
-              <td>$14,455</td>
-            </tr>
-          </table>
-        </div>
+        <div id="columnchart_values" style="width: 700px; height: 420px; padding: 10px;"></div>
+      </div>
+      <div class='charts'>
+          <div class='table-chart'>
+              <p>Outstanding Balances</p>
+              <table>
+                <tr>
+                  <th>Name</th>
+                  <th>Filing Date</th>
+                  <th>Balance</th>
+                </tr>
+                <tr>
+                  <td>Oswald Cobblepot</td>
+                  <td>06/01/2019</td>
+                  <td>$14,455</td>
+                </tr>
+              </table>
+            </div>
+
       </div>
     </div>
   </div>
@@ -116,6 +121,7 @@
     });
     google.charts.setOnLoadCallback(drawPieHole);
     google.charts.setOnLoadCallback(drawBarGraph);
+    google.charts.setOnLoadCallback(drawStackedBar);
 
     function drawPieHole() {
       var data = google.visualization.arrayToDataTable([
@@ -130,10 +136,10 @@
         pieHole: 0.3,
         slices: {
           0: {
-            color: '#ec991a'
+            color: '#0e9797'
           },
           1: {
-            color: '#0e9797'
+            color: '#ec991a'
           },
           2: {
             color: '#19b977'
@@ -169,9 +175,38 @@
       };
 
       var chart = new google.charts.Bar(document.getElementById('columnchart_values'));
-
       chart.draw(data, google.charts.Bar.convertOptions(options));
     }
+
+    function drawStackedBar() {
+
+      var data = google.visualization.arrayToDataTable([
+		['Receivables', 'Paid', 'Filed', 'Eligible for Reimbursement', { role: 'annotation' } ],
+        ['04/21/2019', 50000, 30000, 75000, ''],
+        ['04/26/2019', 45000, 20000, 60000, ''],
+        ['05/03/2019', 60000, 40000, 65000, ''],
+        ['05/10/2019', 45000, 25000, 60000, ''],
+        ['05/17/2019', 40000, 15000, 45000, ''],
+        ['05/24/2019', 45000, 40000, 55000, ''],
+        ['06/01/2019', 45000, 25000, 60000, '']
+      ]);
+
+        var options = {
+        width: 650,
+        height: 400,
+        legend: { position: 'bottom', maxLines: 3, textStyle: {color: 'black', fontSize: 16 } },
+		isStacked: true,
+    colors: ['#19b977', '#ec991a', '#0e9797' ],
+    title: 'Outstanding Receivables Over Time'
+
+		// Displays tooltip on selection.
+		// tooltip: { trigger: 'selection' }, 
+      };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('stacked_bar'));
+        chart.draw(data, options);
+     }
+
   </script>
 </body>
 
