@@ -112,13 +112,14 @@ body {
   color: #828282;
   font-size: 1.1em;
   padding-top: 80px;
+  text-align: center !important;
 }
 
 .drill-it {
   color: #828282;
   font-size: 2em;
   padding-top: 100px;
-  text-align: center;
+  padding-left: 15%;
 }
 
 .dropdown {
