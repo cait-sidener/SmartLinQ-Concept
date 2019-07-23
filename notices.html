@@ -124,12 +124,15 @@
             </div>
 
             <div class="row">
-                <div id='drill' class="column" onclick="openTab('b1');" style="background-color: #574f77; margin-bottom:3%;">
+                <div id='drill' class="column" onclick="openTab('b1');"
+                    style="background-color: #574f77; margin-bottom:3%;">
                     Drill Down <img id='arrow' style='margin-left: 10px;' src='assets/images/drop-down-arrow1.png'>
                 </div>
 
-                <div id='details' class="column" onclick="openTab('b2');" style="background-color: #574f77; margin-bottom:3%;">
-                        <img id='arrow' style='margin-right: 10px;' src='assets/images/drop-down-arrow1.png'> Details & Actions
+                <div id='details' class="column" onclick="openTab('b2');"
+                    style="background-color: #574f77; margin-bottom:3%;">
+                    <img id='arrow' style='margin-right: 10px;' src='assets/images/drop-down-arrow1.png'> Details &
+                    Actions
                 </div>
             </div>
 
@@ -219,7 +222,6 @@
 
             <div id="b2" class="containerTab" style="display:none;background:transparent">
                 <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-                <h4 style='color: #000; margin-top: -2%;'>Notices</h4>
 
                 <div class='tabs'>
                     <button class="tablink" onclick="openPage('support-files', this, 'grey')"
@@ -231,23 +233,268 @@
                     <button class="tablink" onclick="openPage('audit', this, 'grey')">Audit</button>
                 </div>
                 <div id="support-files" class="tabcontent">
-                    <h5 style='padding: 10px;'>Supporting Files</h5>
+                    <h5 class='sub-title' style='padding: 10px;'>Supporting Files</h5>
+                    <table style='margin:30px; width: 90%;'>
+                        <tr>
+                            <th>File Name</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Size</th>
+                        </tr>
+                        <tr>
+                            <td>FMLA.pdf</td>
+                            <td>FMLA Voucher</td>
+                            <td>Document</td>
+                            <td>0.56 MB</td>
+                        </tr>
+                        <tr>
+                            <td>rupert_thorneCOBRA.pdf</td>
+                            <td>COBRA Documentation</td>
+                            <td>Document</td>
+                            <td>0.73 MB</td>
+                        </tr>
+                    </table>
+                    <h5 class='sub-title' style='padding: 10px;'>Add Supporting Files</h5>
+                    <div class='wrap-file'>
+                        <h6>Drag your file into this box or click here to upload</h6>
+                    </div>
                 </div>
 
-                <div id="work-status" class="tabcontent">
-                    <h5 style='padding: 10px;'>Work Status Form</h5>
+                <div id="work-status" class="tabcontent" style='background-color: #f2f2f2;'>
+                    <div class='criteria'>
+                        <h5 class='sub-title' style='padding: 10px;'>Employee</h5>
+                        <div class='first'>
+                            <div class='wrapper-box'>
+                                <p class='greyed'>Name</p>
+                                <p>Rupert Thorne</p>
+                            </div>
+                            <div class='wrapper-box'>
+                                <p class='greyed'>Date of Hire</p>
+                                <p>03/22/1999</p>
+                            </div>
+                            <div class='wrapper-box'>
+                                <p class='greyed'>Work Status</p>
+                                <p>Active Part-Time, Reduced Hours</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class='first'>
+                            <div class='wrapper-box'>
+                                <p class='greyed'>Last Work Date</p>
+                                <br>
+                            </div>
+                            <div class='wrapper-box'>
+                                <p class='greyed'>Retirement Date</p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class='criteria'>
+                        <h5 class='sub-title' style='padding: 10px;'>Coverage</h5>
+                        <div class='first'>
+                            <div class='wrapper-box'>
+                                <p class='greyed'>Coverage Effective Date</p>
+                                <p>05/01/1999</p>
+                            </div>
+                            <div class='wrapper-box'>
+                                <p class='greyed'>Coverage Terminated</p>
+                                <p>No</p>
+                            </div>
+                            <div class='wrapper-box'>
+                                <p class='greyed'>Coverage Termination Date</p>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class='criteria'>
+                        <h5 class='sub-title' style='padding: 10px;'>COBRA</h5>
+                        <div class='first'>
+                            <div class='wrapper-box'>
+                                <p class='greyed'>COBRA Effective Date</p>
+                                <p>02/13/2019</p>
+                            </div>
+                            <div class='wrapper-box'>
+                                <p class='greyed'>COBRA Termination Date</p>
+                                <p>05/23/2019</p>
+                            </div>
+                            <div class='wrapper-box'>
+                                <p class='greyed'>Return to Work Date</p>
+                                <p>06/01/2019</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class='criteria'>
+
+                        <h5 class='sub-title' style='padding: 10px;'>Disability</h5>
+                        <div class='first'>
+                            <div class='wrapper-box'>
+                                <p class='greyed'>Disabled</p>
+                                <p>No</p>
+                            </div>
+                            <div class='wrapper-box'>
+                                <p class='greyed'>Disability Dates</p>
+                                <p>05/23/2019 - 06/01/2019</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class='criteria'>
+
+                        <h5 class='sub-title' style='padding: 10px;'>Other Insurance Plan</h5>
+                        <div class='first'>
+                            <div class='wrapper-box'>
+                                <p class='greyed'>Other Insurance Plan</p>
+                                <p>No</p>
+                            </div>
+                            <div class='wrapper-box'>
+                                <p class='greyed'>Effective Date</p>
+                                <br>
+                            </div>
+                            <div class='wrapper-box'>
+                                <p class='greyed'>Carrier</p>
+                                <br>
+                            </div>
+                        </div>
+                        <br>
+                        <div class='wrapper-box' style='width:95% !important; margin-left: 25px;'>
+                            <p class='greyed'>Details</p>
+                            <br>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class='criteria'>
+
+                        <h5 class='sub-title' style='padding: 10px;'>Pre-Existing Conditions</h5>
+                        <div class='first'>
+                            <div class='wrapper-box'>
+                                <p class='greyed'>Injury Related</p>
+                                <p>Yes</p>
+                            </div>
+                            <div class='wrapper-box'>
+                                <p class='greyed'>Date of Injury</p>
+                                <p>05/23/2019</p>
+                            </div>
+                            <div class='wrapper-box'>
+                                <p class='greyed'>Place of Injury</p>
+                                <br>
+                            </div>
+                        </div>
+                        <br>
+                        <div class='wrapper-box' style='width:95% !important; margin-left: 25px;'>
+                            <p class='greyed'>Interview Details</p>
+                            <br>
+                        </div>
+                    </div>
                 </div>
 
-                <div id="notes" class="tabcontent">
-                    <h5 style='padding: 10px;'>Notes</h5>
+                <div id="notes" class="tabcontent" style='background-color: #f2f2f2;'>
+                    <div class='criteria'>
+
+                        <h5 class='sub-title' style='padding: 10px;'>New Note</h5>
+                        <form>
+                            <input class='note' type='text'>
+                            <br>
+                            <input style='background-color:#574f77; color: #fff; margin-left:30px;' type='submit'
+                                value='Save'>
+                        </form>
+                    </div>
+                    <br />
+                    <br />
+                    <div class='criteria'>
+                        <h5 class='sub-title' style='padding: 10px;'>Previous Notes</h5>
+                        <p style='margin-left: 30px; margin-top: 30px;'>Monday, June 3rd, 2019 1:34pm - Rupert Thorne
+                        </p>
+                        <div class='wrap'>
+                            <p class='greyed'>Details</p>
+                            <p>Spoke with Harvey Dent at Client X today to confirm they needed to retreive Work Status
+                                for
+                                the claimant.</p>
+                        </div>
+                        <p style='margin-left: 30px;'>Friday, May 31st 10:33am - Rupert Thorne</p>
+                        <div class='wrap'>
+                            <p class='greyed'>Details</p>
+                            <p>Spoke with HR Rep, Alfred, about claimant's Work Status. Was informed that they no longer
+                                work with the company <br> and we will need to reach Harvey Dent at Client X for
+                                information of
+                                claimant's new employment. Alfred gave me the number (555)555-5555 as contact number for
+                                Harvey.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="notices" class="tabcontent">
-                    <h5 style='padding: 10px;'>Notices</h5>
+                    <h5 class='sub-title' style='padding: 10px;'>Notices</h5>
+                    <table style='margin:30px; width: 90%;'>
+                        <tr>
+                            <th>Account</th>
+                            <th>Member</th>
+                            <th>Member ID</th>
+                            <th>Carrier</th>
+                            <th>Policy Name</th>
+                            <th>Effective Date</th>
+                            <th>Notice Type</th>
+                            <th>Sent Date</th>
+                        </tr>
+                        <tr>
+                            <td>Dunder Mifflin Paper</td>
+                            <td>Rupert Thorne</td>
+                            <td>10554-5</td>
+                            <td>Symetra</td>
+                            <td>2019 Stop-Loss</td>
+                            <td>01/01/2019</td>
+                            <td>Large Claim Notification</td>
+                            <td>05/21/2019</td>
+                        </tr>
+                        <tr>
+                            <td>Dunder Mifflin Paper</td>
+                            <td>Rupert Thorne</td>
+                            <td>10554-5</td>
+                            <td>Symetra</td>
+                            <td>2019 Stop-Loss</td>
+                            <td>01/01/2019</td>
+                            <td>First Notification of Loss</td>
+                            <td>01/20/2019</td>
+                        </tr>
+                    </table>
+
                 </div>
 
                 <div id="audit" class="tabcontent">
-                    <h5 style='padding: 10px;'>Audit</h5>
+                    <h5 class='sub-title' style='padding: 10px;'>Audit</h5>
+                    <table style='margin:30px; width: 90%;'>
+                        <tr>
+                            <th>Event</th>
+                            <th>User</th>
+                            <th>Org Name</th>
+                            <th>Event Created</th>
+                        </tr>
+                        <tr>
+                            <td>Claim Submitted</td>
+                            <td>Bruce Wayne</td>
+                            <td>Sell-Side Org</td>
+                            <td>05/01/2019, 10:13am</td>
+                        </tr>
+                        <tr>
+                            <td>Note Added</td>
+                            <td>Bruce Wayne</td>
+                            <td>Sell-Side Org</td>
+                            <td>04/30/2019, 4:45pm</td>
+                        </tr>
+                        <tr>
+                            <td>Claim Created</td>
+                            <td>System</td>
+                            <td>Sell-Side Org</td>
+                            <td>04/30/2019, 1:30pm</td>
+                        </tr>
+                    </table>
                 </div>
 
             </div>
@@ -279,12 +526,12 @@
                 padding: 20px;
             }
 
-            /* Clear floats after the columns */
-            .row:after {
-                content: "";
-                display: table;
-                clear: both;
+            .criteria {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 10px;
             }
+
 
             /* Closable button inside the container tab */
             .closebtn {
@@ -301,6 +548,36 @@
 
             #drill {
                 margin-left: 15px;
+            }
+
+            .first {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .greyed {
+                color: #adadad;
+            }
+
+            .note {
+                height: 150px;
+                margin: 30px 30px 5px;
+                width: 60% !important;
+            }
+
+            /* Clear floats after the columns */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .sub-title {
+                background-color: #574f77;
+                border-radius: 5px;
+                color: white;
+                text-align: center;
+                width: 15%;
             }
 
             .tabs {
@@ -329,7 +606,32 @@
                 background-color: #fff;
                 color: #000;
                 display: none;
-                height: 150px;
+                height: 1400px;
+                margin-top: 30px;
+            }
+
+            .wrap {
+                background-color: #f7f7f7;
+                margin: 5px 30px 30px 30px;
+                padding: 15px;
+                width: 60%;
+            }
+
+            .wrapper-box {
+                background-color: #f7f7f7;
+                border-radius: 5px;
+                padding: 7px;
+                width: 30%;
+            }
+
+            .wrap-file {
+                background-color: #f7f7f7;
+                border-radius: 5px ;
+                border: dashed #d9d9d9;
+                height: 100px;
+                margin: 5px 30px 30px 30px;
+                padding: 30px;
+                text-align: center;
             }
         </style>
 

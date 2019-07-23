@@ -339,7 +339,7 @@ ul {
 }
 
 @media (max-width: 700px) {
-  .container {
+  .contain {
     grid-template-areas:
       "header   header    header"
       "content  content   content"
