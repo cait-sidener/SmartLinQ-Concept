@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
     <title>Smart-LinQ</title>
 </head>
 
@@ -44,101 +53,108 @@
             </ol>
             <h2>Notices</h2>
             <div class='acct-info'>
-                <div class='org-dropdown'>
+                <div class='dropdown'>
                     <h3>TPA #1</h3>
-                    <form>
-                        <select>
-                            <option value="1">Bruce Wayne - Admin</option>
-                            <option value="2">Damian Wayne - Admin</option>
-                            <option value="3">Barbara Gordon - User</option>
-                            <option value="4">Selina Kyle - User</option>
-                            <option value="5">Kate Kane - User</option>
-                            <option value="6">Redhood - User</option>
-                        </select>
-                    </form>
-                </div>
-                <div class='card'>
-                    <div class='acct-active'>
-                        <h4><a href='policies.html'>Account</a></h4>
-                        <p style='color:#428A56'><b>Active</b></p>
+                    <br>
+                    <div class="dropdown">
+                        <a class="btn btn-lg dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            style='border:solid 1px #ccc;'>
+                            Bruce Wayne - Admin
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="policies.html">Bruce Wayne - Admin</a>
+                            <a class="dropdown-item" href="#">Damian Wayne - Admin</a>
+                            <a class="dropdown-item" href="#">Barbara Gordon - User</a>
+                            <a class="dropdown-item" href="#">Selina Kyle - User</a>
+                            <a class="dropdown-item" href="#">Kate Kane - User</a>
+                            <a class="dropdown-item" href="#">Jack Shaw - User</a>
+                        </div>
                     </div>
-                    <p style='color:#574f77'><b>0004 ACE Chemical</b></p>
-                    <p>Jason Todd</p>
-                    <p>916-334-5432</p>
-                    <p>redhood@acechem.com</p>
-                    <p><b>324 Members</b></p>
-
-
-                </div>
-                <div class='card'>
-                    <div class='acct-active'>
-                        <h4><a href='filings.html'>Policy</a></h4>
-                        <p style='color:#428A56'><b>Active</b></p>
-                    </div>
-                    <p style='color:#574f77'><b>101 Stop-Loss 2018</b></p>
-                    <p>Admin: Bruce Wayne</p>
-                    <p>Coord: Alfred</p>
-                    <div class='ins-exp'>
-                        <p>Symetra</p>
-                        <p>1/1/2019</p>
-                    </div>
-                    <div class='ins-exp'>
-                        <p>Agg</p>
-                        <p>Med, Rx</p>
-                    </div>
-                    <p>Deduct Status: $400,000 of $1,000,000</p>
-                    <p><a href='#'><u>Options</u></a></p>
-
-                </div>
-                <div class='card'>
-                    <div class='acct-active'>
-                        <h4><a href='claims.html'>Filing</a></h4>
-                        <p style='color:#428A56'><b>Ready to Submit</b></p>
-                    </div>
-                    <div class='acct-active'>
-                        <p style='color:#574f77'><b>46 - Rupert Thorne</b></p>
-                        <p>Subsequent</p>
-                    </div>
-                    <p>3/12/19</p>
-                    <p>$0 or $3454</p>
-                    <div class='ins-exp'>
-                        <p>2 Claims</p>
-                        <p>L03.125</p>
-                    </div>
-                    <p><a href='#'><u>Cover Letter</u></a></p>
-                </div>
-                <div class='card'>
-                    <div class='acct-active'>
-                        <h4>Claim</h4>
-                        <p style='color:#428A56'><b>Full Time</b></p>
-                    </div>
-                    <div class='acct-active'>
-                        <p style='color:#574f77'><b>20-234 - Rupert Thorne</b></p>
-                        <p>Subsequent</p>
-                    </div>
-                    <p>3/12/19</p>
-                    <p>$0 or $3000</p>
-                    <br />
-                    <p><a href='#'><u>Attachments</u></a></p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div id='drill' class="column" onclick="openTab('b1');"
-                    style="background-color: #574f77; margin-bottom:3%;">
-                    Drill Down <img id='arrow' style='margin-left: 10px;' src='assets/images/drop-down-arrow1.png'>
                 </div>
 
-                <div id='details' class="column" onclick="openTab('b2');"
-                    style="background-color: #574f77; margin-bottom:3%;">
-                    <img id='arrow' style='margin-right: 10px;' src='assets/images/drop-down-arrow1.png'> Details &
-                    Actions
-                </div>
-            </div>
+                    <div class='card'>
+                        <div class='acct-active'>
+                            <h4><a href='policies.html'>Account</a></h4>
+                            <p style='color:#428A56'><b>Active</b></p>
+                        </div>
+                        <p style='color:#574f77'><b>0004 ACE Chemical</b></p>
+                        <p>Jason Todd</p>
+                        <p>916-334-5432</p>
+                        <p>redhood@acechem.com</p>
+                        <p><b>324 Members</b></p>
 
-            <div id="b1" class="containerTab" style="display:none;background:transparent">
-                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-                    
+
+                    </div>
+                    <div class='card'>
+                        <div class='acct-active'>
+                            <h4><a href='filings.html'>Policy</a></h4>
+                            <p style='color:#428A56'><b>Active</b></p>
+                        </div>
+                        <p style='color:#574f77'><b>101 Stop-Loss 2018</b></p>
+                        <p>Admin: Bruce Wayne</p>
+                        <p>Coord: Alfred</p>
+                        <div class='ins-exp'>
+                            <p>Symetra</p>
+                            <p>1/1/2019</p>
+                        </div>
+                        <div class='ins-exp'>
+                            <p>Agg</p>
+                            <p>Med, Rx</p>
+                        </div>
+                        <p>Deduct Status: $400,000 of $1,000,000</p>
+                        <p><a href='#'><u>Options</u></a></p>
+
+                    </div>
+                    <div class='card'>
+                        <div class='acct-active'>
+                            <h4><a href='claims.html'>Filing</a></h4>
+                            <p style='color:#428A56'><b>Ready to Submit</b></p>
+                        </div>
+                        <div class='acct-active'>
+                            <p style='color:#574f77'><b>46 - Rupert Thorne</b></p>
+                            <p>Subsequent</p>
+                        </div>
+                        <p>3/12/19</p>
+                        <p>$0 or $3454</p>
+                        <div class='ins-exp'>
+                            <p>2 Claims</p>
+                            <p>L03.125</p>
+                        </div>
+                        <p><a href='#'><u>Cover Letter</u></a></p>
+                    </div>
+                    <div class='card'>
+                        <div class='acct-active'>
+                            <h4>Claim</h4>
+                            <p style='color:#428A56'><b>Full Time</b></p>
+                        </div>
+                        <div class='acct-active'>
+                            <p style='color:#574f77'><b>20-234 - Rupert Thorne</b></p>
+                            <p>Subsequent</p>
+                        </div>
+                        <p>3/12/19</p>
+                        <p>$0 or $3000</p>
+                        <br />
+                        <p><a href='#'><u>Attachments</u></a></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id='drill' class="column" onclick="openTab('b1');"
+                        style="background-color: #574f77; margin-bottom:3%;">
+                        Drill Down <img id='arrow' style='margin-left: 10px;' src='assets/images/drop-down-arrow1.png'>
+                    </div>
+
+                    <div id='details' class="column" onclick="openTab('b2');"
+                        style="background-color: #574f77; margin-bottom:3%;">
+                        <img id='arrow' style='margin-right: 10px;' src='assets/images/drop-down-arrow1.png'> Details &
+                        Actions
+                    </div>
+                </div>
+
+                <div id="b1" class="containerTab" style="display:none;background:transparent">
+                    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
                     <div class='card' style='background-color: #f2f2f2 !important; border: none !important;'>
                         <div class='criteria' style='margin-bottom: 20px;'>
                             <h5 class='sub-title' style='padding: 10px;'>Claim</h5>
@@ -254,10 +270,10 @@
                                     <p>785-825-0019</p>
                                 </div>
                             </div>
-                            
-                
-                            </div>
+
+
                         </div>
+                    </div>
 
 
                 </div>

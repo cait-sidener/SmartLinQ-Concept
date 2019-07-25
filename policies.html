@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
     <title>Smart-LinQ</title>
 </head>
 
@@ -42,128 +51,135 @@
 
             <h2>Policy</h2>
             <div class='acct-info'>
-                <div class='org-dropdown'>
+                <div class='dropdown'>
                     <h3>TPA #1</h3>
-                    <form>
-                        <select>
-                            <option value="1">Bruce Wayne - Admin</option>
-                            <option value="2">Damian Wayne - Admin</option>
-                            <option value="3">Barbara Gordon - User</option>
-                            <option value="4">Selina Kyle - User</option>
-                            <option value="5">Kate Kane - User</option>
-                            <option value="6">Redhood - User</option>
-                        </select>
-                    </form>
-                </div>
-                <div class='card'>
-                    <div class='acct-active'>
-                        <h4>Account</h4>
-                        <p style='color:#428A56'><b>Active</b></p>
+                    <br>
+                    <div class="dropdown">
+                        <a class="btn btn-lg dropdown-toggle" href="policies.html" role="button" id="dropdownMenuLink"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            style='border:solid 1px #ccc;'>
+                            Bruce Wayne - Admin
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="policies.html">Bruce Wayne - Admin</a>
+                            <a class="dropdown-item" href="#">Damian Wayne - Admin</a>
+                            <a class="dropdown-item" href="#">Barbara Gordon - User</a>
+                            <a class="dropdown-item" href="#">Selina Kyle - User</a>
+                            <a class="dropdown-item" href="#">Kate Kane - User</a>
+                            <a class="dropdown-item" href="#">Jack Shaw - User</a>
+                        </div>
                     </div>
-                    <p style='color:#574f77'><b>0004 ACE Chemical</b></p>
-                    <p>Jason Todd</p>
-                    <p>916-334-5432</p>
-                    <p>redhood@acechem.com</p>
-                    <p><b>324 Members</b></p>
                 </div>
-                <div class='card'>
-                    <h4>Policy</h4>
-                    <p class='drill'>Drill Down Below</p>
-                    <p style='color: transparent; text-shadow: none;'>Deduct Status: $400,000 of $1,000,000</p>
+                    <div class='card'>
+                        <div class='acct-active'>
+                            <h4>Account</h4>
+                            <p style='color:#428A56'><b>Active</b></p>
+                        </div>
+                        <p style='color:#574f77'><b>0004 ACE Chemical</b></p>
+                        <p>Jason Todd</p>
+                        <p>916-334-5432</p>
+                        <p>redhood@acechem.com</p>
+                        <p><b>324 Members</b></p>
+                    </div>
+                    <div class='card'>
+                        <h4>Policy</h4>
+                        <p class='drill'>Drill Down Below</p>
+                        <p style='color: transparent; text-shadow: none;'>Deduct Status: $400,000 of $1,000,000</p>
 
+                    </div>
+                    <div class='card'>
+                        <h4>Filing</h4>
+                        <p class='drill'>Drill Down Below</p>
+                    </div>
+                    <div class='card'>
+                        <h4>Claim</h4>
+                        <p class='drill'>Drill Down Below</p>
+                    </div>
                 </div>
-                <div class='card'>
-                    <h4>Filing</h4>
-                    <p class='drill'>Drill Down Below</p>
-                </div>
-                <div class='card'>
-                    <h4>Claim</h4>
-                    <p class='drill'>Drill Down Below</p>
+
+                <h3 id='title'>Drill Down</h3>
+
+                <div class='acct-details'>
+                    <div class='card card-drill'>
+                        <div class='active'>
+                            <div class="onoffswitch">
+                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox"
+                                    id="myonoffswitch" checked>
+                                <label class="onoffswitch-label" for="myonoffswitch">
+                                    <span class="onoffswitch-inner"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                            </div>
+                            <h6 class='space'>Active Policy</h6>
+                        </div>
+                        <form class='search'>
+                            <input type="text" name="search" placeholder="name - id">
+                        </form>
+                        <form>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio"> Accounts <a href='#'><u>1</u></a></label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio" checked> Policies <a
+                                        href='#'><u>2</u></a></label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio"> Members <a href='#'><u>324</u></a></label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio"> Filings <a href='#'><u>75</u></a></label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio"> Claims <a href='#'><u>204</u></a></label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio"> Notices <a href='#'><u>4</u></a></label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class='card card-drill2'>
+                        <h3>Policies</h3>
+                        <table>
+                            <tr>
+                                <th>ID</th>
+                                <th>Policy</th>
+                                <th>Type</th>
+                                <th>Coverage</th>
+                                <th>Attach Pt</th>
+                                <th>Term</th>
+                                <th>Effective Date</th>
+                                <th>Stop-Loss Admin</th>
+                                <th>Eligibility Coordinator</th>
+
+                            </tr>
+                            <tr>
+                                <td><a href='filings.html'>101</a></td>
+                                <td><a href='filings.html'>Stop-Loss 2018</a></td>
+                                <td>Agg</td>
+                                <td>Med & Rx</td>
+                                <td>$1,000,000</td>
+                                <td>12/12</td>
+                                <td>1/1/2019</td>
+                                <td>Bruce Wayne</td>
+                                <td>Alfred</td>
+                            </tr>
+                            <tr>
+                                <td><a href='#'>102</a></td>
+                                <td>Stop-Loss Spec 2018</td>
+                                <td>Spec</td>
+                                <td>Med & Rx</td>
+                                <td>$50,000</td>
+                                <td>12/12</td>
+                                <td>1/1/2019</td>
+                                <td>Bruce Wayne</td>
+                                <td>Alfred</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
-
-            <h3 id='title'>Drill Down</h3>
-
-            <div class='acct-details'>
-                <div class='card card-drill'>
-                    <div class='active'>
-                        <div class="onoffswitch">
-                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch"
-                                checked>
-                            <label class="onoffswitch-label" for="myonoffswitch">
-                                <span class="onoffswitch-inner"></span>
-                                <span class="onoffswitch-switch"></span>
-                            </label>
-                        </div>
-                        <h6 class='space'>Active Policy</h6>
-                    </div>
-                    <form class='search'>
-                        <input type="text" name="search" placeholder="name - id">
-                    </form>
-                    <form>
-                        <div class="radio">
-                            <label><input type="radio" name="optradio"> Accounts <a href='#'><u>1</u></a></label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="optradio" checked> Policies <a
-                                    href='#'><u>2</u></a></label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="optradio"> Members <a href='#'><u>324</u></a></label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="optradio"> Filings <a href='#'><u>75</u></a></label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="optradio"> Claims <a href='#'><u>204</u></a></label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="optradio"> Notices <a href='#'><u>4</u></a></label>
-                        </div>
-                    </form>
-                </div>
-                <div class='card card-drill2'>
-                    <h3>Policies</h3>
-                    <table>
-                        <tr>
-                            <th>ID</th>
-                            <th>Policy</th>
-                            <th>Type</th>
-                            <th>Coverage</th>
-                            <th>Attach Pt</th>
-                            <th>Term</th>
-                            <th>Effective Date</th>
-                            <th>Stop-Loss Admin</th>
-                            <th>Eligibility Coordinator</th>
-
-                        </tr>
-                        <tr>
-                            <td><a href='filings.html'>101</a></td>
-                            <td><a href='filings.html'>Stop-Loss 2018</a></td>
-                            <td>Agg</td>
-                            <td>Med & Rx</td>
-                            <td>$1,000,000</td>
-                            <td>12/12</td>
-                            <td>1/1/2019</td>
-                            <td>Bruce Wayne</td>
-                            <td>Alfred</td>
-                        </tr>
-                        <tr>
-                            <td><a href='#'>102</a></td>
-                            <td>Stop-Loss Spec 2018</td>
-                            <td>Spec</td>
-                            <td>Med & Rx</td>
-                            <td>$50,000</td>
-                            <td>12/12</td>
-                            <td>1/1/2019</td>
-                            <td>Bruce Wayne</td>
-                            <td>Alfred</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
         </div>
     </div>
 </body>
+
 </html>

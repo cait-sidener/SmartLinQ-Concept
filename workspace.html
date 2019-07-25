@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
     <title>Smart-LinQ</title>
 </head>
 
@@ -32,26 +41,32 @@
                 <p>User</p>
             </div>
         </div>
-        
+
         <div class='item content'>
-                <ol class="breadcrumb">
-                        <li class="breadcrumb-item active">Workspace</li>
-                    </ol>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active">Workspace</li>
+            </ol>
             <h2>Workspace</h2>
             <div class='acct-info'>
-                <div class='org-dropdown'>
+                <div class='dropdown'>
                     <h3>TPA #1</h3>
-                    <form>
-                        <select>
-                            <option value="0">Select User:</option>
-                            <option value="1">Bruce Wayne - Admin</option>
-                            <option value="2">Damian Wayne - Admin</option>
-                            <option value="3">Barbara Gordon - User</option>
-                            <option value="4">Selina Kyle - User</option>
-                            <option value="5">Kate Kane - User</option>
-                            <option value="6">Jack Shaw - User</option>
-                        </select>
-                    </form>
+                    <br>
+                    <div class="dropdown">
+                        <a class="btn btn-lg dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            style='border:solid 1px #ccc;'>
+                            Select User:
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="policies.html">Bruce Wayne - Admin</a>
+                            <a class="dropdown-item" href="#">Damian Wayne - Admin</a>
+                            <a class="dropdown-item" href="#">Barbara Gordon - User</a>
+                            <a class="dropdown-item" href="#">Selina Kyle - User</a>
+                            <a class="dropdown-item" href="#">Kate Kane - User</a>
+                            <a class="dropdown-item" href="#">Jack Shaw - User</a>
+                        </div>
+                    </div>
+
                 </div>
                 <div class='card'>
                     <h4>Account</h4>
@@ -93,8 +108,8 @@
                         </form>
                         <form>
                             <div class="radio">
-                                <label><input type="radio" name="optradio" checked> <a href='accounts.html'>Accounts</a> <a
-                                        href='accounts.html'><u>201</u></a></label>
+                                <label><input type="radio" name="optradio" checked> <a href='accounts.html'>Accounts</a>
+                                    <a href='accounts.html'><u>201</u></a></label>
                             </div>
                             <div class="radio">
                                 <label><input type="radio" name="optradio"> Policies <a

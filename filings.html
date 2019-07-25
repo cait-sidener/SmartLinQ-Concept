@@ -7,7 +7,16 @@
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Smart-LinQ</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+        <title>Smart-LinQ</title>
 </head>
 
 <body>
@@ -42,187 +51,195 @@
             </ol>
             <h2>Filings</h2>
             <div class='acct-info'>
-                <div class='org-dropdown'>
+                <div class='dropdown'>
                     <h3>TPA #1</h3>
-                    <form>
-                        <select>
-                            <option value="1">Bruce Wayne - Admin</option>
-                            <option value="2">Damian Wayne - Admin</option>
-                            <option value="3">Barbara Gordon - User</option>
-                            <option value="4">Selina Kyle - User</option>
-                            <option value="5">Kate Kane - User</option>
-                            <option value="6">Redhood - User</option>
-                        </select>
-                    </form>
-                </div>
-                <div class='card'>
-                    <div class='acct-active'>
-                        <h4><a href='policies.html'>Account</a></h4>
-                        <p style='color:#428A56'><b>Active</b></p>
+                    <br>
+                    <div class="dropdown">
+                        <a class="btn btn-lg dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            style='border:solid 1px #ccc;'>
+                            Bruce Wayne - Admin
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="policies.html">Bruce Wayne - Admin</a>
+                            <a class="dropdown-item" href="#">Damian Wayne - Admin</a>
+                            <a class="dropdown-item" href="#">Barbara Gordon - User</a>
+                            <a class="dropdown-item" href="#">Selina Kyle - User</a>
+                            <a class="dropdown-item" href="#">Kate Kane - User</a>
+                            <a class="dropdown-item" href="#">Jack Shaw - User</a>
+                        </div>
                     </div>
-                    <p style='color:#574f77'><b>0004 ACE Chemical</b></p>
-                    <p>Jason Todd</p>
-                    <p>916-334-5432</p>
-                    <p>redhood@acechem.com</p>
-                    <p><b>324 Members</b></p>
+                </div>
+
+                    <div class='card'>
+                        <div class='acct-active'>
+                            <h4><a href='policies.html'>Account</a></h4>
+                            <p style='color:#428A56'><b>Active</b></p>
+                        </div>
+                        <p style='color:#574f77'><b>0004 ACE Chemical</b></p>
+                        <p>Jason Todd</p>
+                        <p>916-334-5432</p>
+                        <p>redhood@acechem.com</p>
+                        <p><b>324 Members</b></p>
 
 
-                </div>
-                <div class='card'>
-                    <div class='acct-active'>
-                        <h4>Policy</h4>
-                        <p style='color:#428A56'><b>Active</b></p>
                     </div>
-                    <p style='color:#574f77'><b>101 Stop-Loss 2018</b></p>
-                    <p>Admin: Bruce Wayne</p>
-                    <p>Coord: Alfred</p>
-                    <div class='ins-exp'>
-                        <p>Symetra</p>
-                        <p>1/1/2019</p>
+                    <div class='card'>
+                        <div class='acct-active'>
+                            <h4>Policy</h4>
+                            <p style='color:#428A56'><b>Active</b></p>
+                        </div>
+                        <p style='color:#574f77'><b>101 Stop-Loss 2018</b></p>
+                        <p>Admin: Bruce Wayne</p>
+                        <p>Coord: Alfred</p>
+                        <div class='ins-exp'>
+                            <p>Symetra</p>
+                            <p>1/1/2019</p>
+                        </div>
+                        <div class='ins-exp'>
+                            <p>Agg</p>
+                            <p>Med, Rx</p>
+                        </div>
+                        <p>Deduct Status: $400,000 of $1,000,000</p>
+                        <p><a href='#'><u>Options</u></a></p>
                     </div>
-                    <div class='ins-exp'>
-                        <p>Agg</p>
-                        <p>Med, Rx</p>
+                    <div class='card'>
+                        <h4>Filing</h4>
+                        <p class='drill'>Drill Down Below</p>
                     </div>
-                    <p>Deduct Status: $400,000 of $1,000,000</p>
-                    <p><a href='#'><u>Options</u></a></p>
+                    <div class='card'>
+                        <h4>Claim</h4>
+                        <p class='drill'>Drill Down Below</p>
+                    </div>
                 </div>
-                <div class='card'>
-                    <h4>Filing</h4>
-                    <p class='drill'>Drill Down Below</p>
-                </div>
-                <div class='card'>
-                    <h4>Claim</h4>
-                    <p class='drill'>Drill Down Below</p>
+
+                <h3 id='title'>Drill Down</h3>
+
+                <div class='acct-details'>
+                    <div class='card card-drill'>
+                        <div class='active'>
+                            <div class="onoffswitch">
+                                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox"
+                                    id="myonoffswitch" checked>
+                                <label class="onoffswitch-label" for="myonoffswitch">
+                                    <span class="onoffswitch-inner"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                            </div>
+                            <h6 class='space'>Active Policy</h6>
+                        </div>
+                        <form class='search'>
+                            <input type="text" name="search" placeholder="name - id">
+                        </form>
+                        <form>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio"> Accounts <a href='#'><u>1</u></a></label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio"> Policies <a href='#'><u>1</u></a></label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio"> Members <a href='#'><u>324</u></a></label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio" checked> Filings <a
+                                        href='#'><u>5</u></a></label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio"> Claims <a href='#'><u>9</u></a></label>
+                            </div>
+                            <div class="radio">
+                                <label><input type="radio" name="optradio"> Notices <a href='#'><u>2</u></a></label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class='card card-drill2'>
+                        <h3>Filings</h3>
+                        <table>
+                            <tr>
+                                <th>ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Status</th>
+                                <th>Filing Amount</th>
+                                <th>Last Paid</th>
+                                <th>Paid</th>
+                                <th>Deductible</th>
+                                <th>Filing Type</th>
+                                <th>Dx</th>
+                                <th>Claims</th>
+                            </tr>
+                            <tr>
+                                <td><a href='#'>45</a></td>
+                                <td>Jim</td>
+                                <td>Gordon</td>
+                                <td>In Progress</td>
+                                <td>$3454</td>
+                                <td>3/12/19</td>
+                                <td>$340,000</td>
+                                <td>$100</td>
+                                <td>Subsequent</td>
+                                <td>L03.125</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td><a href='claims.html'>46</a></td>
+                                <td><a href='claims.html'>Rupert</a></td>
+                                <td><a href='claims.html'>Thorne</a></td>
+                                <td>Ready to Submit</td>
+                                <td>$3454</td>
+                                <td>3/12/19</td>
+                                <td>$340,000</td>
+                                <td>$100</td>
+                                <td>Subsequent</td>
+                                <td>L03.125</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td><a href='#'>47</a></td>
+                                <td>Francis</td>
+                                <td>Grey</td>
+                                <td>In Progress</td>
+                                <td>$3454</td>
+                                <td>3/12/19</td>
+                                <td>$340,000</td>
+                                <td>$100</td>
+                                <td>Subsequent</td>
+                                <td>L03.125</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td><a href='#'>48</a></td>
+                                <td>Marty</td>
+                                <td>Slacker</td>
+                                <td>Ready to Submit</td>
+                                <td>$3454</td>
+                                <td>3/12/19</td>
+                                <td>$340,000</td>
+                                <td>$100</td>
+                                <td>Subsequent</td>
+                                <td>L03.125</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td><a href='#'>49</a></td>
+                                <td>Harley</td>
+                                <td>Quinn</td>
+                                <td>Submitted</td>
+                                <td>$3454</td>
+                                <td>3/12/19</td>
+                                <td>$340,000</td>
+                                <td>$100</td>
+                                <td>Subsequent</td>
+                                <td>L03.125</td>
+                                <td>2</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
 
-            <h3 id='title'>Drill Down</h3>
-
-            <div class='acct-details'>
-                <div class='card card-drill'>
-                    <div class='active'>
-                        <div class="onoffswitch">
-                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch"
-                                checked>
-                            <label class="onoffswitch-label" for="myonoffswitch">
-                                <span class="onoffswitch-inner"></span>
-                                <span class="onoffswitch-switch"></span>
-                            </label>
-                        </div>
-                        <h6 class='space'>Active Policy</h6>
-                    </div>
-                    <form class='search'>
-                        <input type="text" name="search" placeholder="name - id">
-                    </form>
-                    <form>
-                        <div class="radio">
-                            <label><input type="radio" name="optradio"> Accounts <a href='#'><u>1</u></a></label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="optradio"> Policies <a href='#'><u>1</u></a></label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="optradio"> Members <a href='#'><u>324</u></a></label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="optradio" checked> Filings <a href='#'><u>5</u></a></label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="optradio"> Claims <a href='#'><u>9</u></a></label>
-                        </div>
-                        <div class="radio">
-                            <label><input type="radio" name="optradio"> Notices <a href='#'><u>2</u></a></label>
-                        </div>
-                    </form>
-                </div>
-                <div class='card card-drill2'>
-                    <h3>Filings</h3>
-                    <table>
-                        <tr>
-                            <th>ID</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Status</th>
-                            <th>Filing Amount</th>
-                            <th>Last Paid</th>
-                            <th>Paid</th>
-                            <th>Deductible</th>
-                            <th>Filing Type</th>
-                            <th>Dx</th>
-                            <th>Claims</th>
-                        </tr>
-                        <tr>
-                            <td><a href='#'>45</a></td>
-                            <td>Jim</td>
-                            <td>Gordon</td>
-                            <td>In Progress</td>
-                            <td>$3454</td>
-                            <td>3/12/19</td>
-                            <td>$340,000</td>
-                            <td>$100</td>
-                            <td>Subsequent</td>
-                            <td>L03.125</td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href='claims.html'>46</a></td>
-                            <td><a href='claims.html'>Rupert</a></td>
-                            <td><a href='claims.html'>Thorne</a></td>
-                            <td>Ready to Submit</td>
-                            <td>$3454</td>
-                            <td>3/12/19</td>
-                            <td>$340,000</td>
-                            <td>$100</td>
-                            <td>Subsequent</td>
-                            <td>L03.125</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td><a href='#'>47</a></td>
-                            <td>Francis</td>
-                            <td>Grey</td>
-                            <td>In Progress</td>
-                            <td>$3454</td>
-                            <td>3/12/19</td>
-                            <td>$340,000</td>
-                            <td>$100</td>
-                            <td>Subsequent</td>
-                            <td>L03.125</td>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <td><a href='#'>48</a></td>
-                            <td>Marty</td>
-                            <td>Slacker</td>
-                            <td>Ready to Submit</td>
-                            <td>$3454</td>
-                            <td>3/12/19</td>
-                            <td>$340,000</td>
-                            <td>$100</td>
-                            <td>Subsequent</td>
-                            <td>L03.125</td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><a href='#'>49</a></td>
-                            <td>Harley</td>
-                            <td>Quinn</td>
-                            <td>Submitted</td>
-                            <td>$3454</td>
-                            <td>3/12/19</td>
-                            <td>$340,000</td>
-                            <td>$100</td>
-                            <td>Subsequent</td>
-                            <td>L03.125</td>
-                            <td>2</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
         </div>
-
-    </div>
 
     </div>
 
