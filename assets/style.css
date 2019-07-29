@@ -307,6 +307,7 @@ input[type=text]:focus {
 table {
   font-size: 0.9em;
   border-collapse: collapse;
+  overflow: hidden;
   width: 100%;
 }
 
@@ -315,10 +316,28 @@ th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+  position: relative;
 }
+
+td:hover::after,
+th:hover::after {
+  content:'';
+  position: absolute;
+  background-color: #ffa;
+  left: 0;
+  top: -5000px;
+  height: 10000px;
+  width: 100%;
+  z-index: -1;
+}
+
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+tr:hover {
+  background-color: #ffa
 }
 
 #title {
